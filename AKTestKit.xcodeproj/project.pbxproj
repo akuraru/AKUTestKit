@@ -12,6 +12,15 @@
 		BEFA23E617FFDBC000453AA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E517FFDBC000453AA3 /* UIKit.framework */; };
 		BEFA23EC17FFDBC000453AA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEFA23EA17FFDBC000453AA3 /* InfoPlist.strings */; };
 		BEFA23EE17FFDBC000453AA3 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23ED17FFDBC000453AA3 /* Test.m */; };
+		BEFA240417FFDBD800453AA3 /* DateGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23F517FFDBD800453AA3 /* DateGenerator.m */; };
+		BEFA240517FFDBD800453AA3 /* FixedDate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23F717FFDBD800453AA3 /* FixedDate.m */; };
+		BEFA240617FFDBD800453AA3 /* ListFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23F917FFDBD800453AA3 /* ListFunctional.m */; };
+		BEFA240717FFDBD800453AA3 /* LoseDictionaryGenarator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23FB17FFDBD800453AA3 /* LoseDictionaryGenarator.m */; };
+		BEFA240817FFDBD800453AA3 /* NumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23FD17FFDBD800453AA3 /* NumberGenerator.m */; };
+		BEFA240917FFDBD800453AA3 /* RandString.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23FF17FFDBD800453AA3 /* RandString.m */; };
+		BEFA240A17FFDBD800453AA3 /* RegularString.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240117FFDBD800453AA3 /* RegularString.m */; };
+		BEFA240B17FFDBD800453AA3 /* StringGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240317FFDBD800453AA3 /* StringGenerator.m */; };
+		BEFA240E17FFDBE100453AA3 /* RegularStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +32,23 @@
 		BEFA23EB17FFDBC000453AA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEFA23ED17FFDBC000453AA3 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		BEFA23EF17FFDBC000453AA3 /* Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
+		BEFA23F417FFDBD800453AA3 /* DateGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateGenerator.h; sourceTree = "<group>"; };
+		BEFA23F517FFDBD800453AA3 /* DateGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateGenerator.m; sourceTree = "<group>"; };
+		BEFA23F617FFDBD800453AA3 /* FixedDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedDate.h; sourceTree = "<group>"; };
+		BEFA23F717FFDBD800453AA3 /* FixedDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedDate.m; sourceTree = "<group>"; };
+		BEFA23F817FFDBD800453AA3 /* ListFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFunctional.h; sourceTree = "<group>"; };
+		BEFA23F917FFDBD800453AA3 /* ListFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFunctional.m; sourceTree = "<group>"; };
+		BEFA23FA17FFDBD800453AA3 /* LoseDictionaryGenarator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoseDictionaryGenarator.h; sourceTree = "<group>"; };
+		BEFA23FB17FFDBD800453AA3 /* LoseDictionaryGenarator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoseDictionaryGenarator.m; sourceTree = "<group>"; };
+		BEFA23FC17FFDBD800453AA3 /* NumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberGenerator.h; sourceTree = "<group>"; };
+		BEFA23FD17FFDBD800453AA3 /* NumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberGenerator.m; sourceTree = "<group>"; };
+		BEFA23FE17FFDBD800453AA3 /* RandString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandString.h; sourceTree = "<group>"; };
+		BEFA23FF17FFDBD800453AA3 /* RandString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandString.m; sourceTree = "<group>"; };
+		BEFA240017FFDBD800453AA3 /* RegularString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularString.h; sourceTree = "<group>"; };
+		BEFA240117FFDBD800453AA3 /* RegularString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularString.m; sourceTree = "<group>"; };
+		BEFA240217FFDBD800453AA3 /* StringGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringGenerator.h; sourceTree = "<group>"; };
+		BEFA240317FFDBD800453AA3 /* StringGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringGenerator.m; sourceTree = "<group>"; };
+		BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularStringTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +68,7 @@
 		BEFA23D317FFDBA200453AA3 = {
 			isa = PBXGroup;
 			children = (
+				BEFA23F317FFDBD800453AA3 /* AKTestKit */,
 				BEFA23E717FFDBC000453AA3 /* Test */,
 				BEFA23E017FFDBC000453AA3 /* Frameworks */,
 				BEFA23DF17FFDBC000453AA3 /* Products */,
@@ -69,6 +96,7 @@
 		BEFA23E717FFDBC000453AA3 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */,
 				BEFA23ED17FFDBC000453AA3 /* Test.m */,
 				BEFA23E817FFDBC000453AA3 /* Supporting Files */,
 			);
@@ -83,6 +111,29 @@
 				BEFA23EF17FFDBC000453AA3 /* Test-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEFA23F317FFDBD800453AA3 /* AKTestKit */ = {
+			isa = PBXGroup;
+			children = (
+				BEFA23F417FFDBD800453AA3 /* DateGenerator.h */,
+				BEFA23F517FFDBD800453AA3 /* DateGenerator.m */,
+				BEFA23F617FFDBD800453AA3 /* FixedDate.h */,
+				BEFA23F717FFDBD800453AA3 /* FixedDate.m */,
+				BEFA23F817FFDBD800453AA3 /* ListFunctional.h */,
+				BEFA23F917FFDBD800453AA3 /* ListFunctional.m */,
+				BEFA23FA17FFDBD800453AA3 /* LoseDictionaryGenarator.h */,
+				BEFA23FB17FFDBD800453AA3 /* LoseDictionaryGenarator.m */,
+				BEFA23FC17FFDBD800453AA3 /* NumberGenerator.h */,
+				BEFA23FD17FFDBD800453AA3 /* NumberGenerator.m */,
+				BEFA23FE17FFDBD800453AA3 /* RandString.h */,
+				BEFA23FF17FFDBD800453AA3 /* RandString.m */,
+				BEFA240017FFDBD800453AA3 /* RegularString.h */,
+				BEFA240117FFDBD800453AA3 /* RegularString.m */,
+				BEFA240217FFDBD800453AA3 /* StringGenerator.h */,
+				BEFA240317FFDBD800453AA3 /* StringGenerator.m */,
+			);
+			path = AKTestKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +197,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFA240817FFDBD800453AA3 /* NumberGenerator.m in Sources */,
+				BEFA240517FFDBD800453AA3 /* FixedDate.m in Sources */,
 				BEFA23EE17FFDBC000453AA3 /* Test.m in Sources */,
+				BEFA240A17FFDBD800453AA3 /* RegularString.m in Sources */,
+				BEFA240717FFDBD800453AA3 /* LoseDictionaryGenarator.m in Sources */,
+				BEFA240E17FFDBE100453AA3 /* RegularStringTest.m in Sources */,
+				BEFA240917FFDBD800453AA3 /* RandString.m in Sources */,
+				BEFA240617FFDBD800453AA3 /* ListFunctional.m in Sources */,
+				BEFA240B17FFDBD800453AA3 /* StringGenerator.m in Sources */,
+				BEFA240417FFDBD800453AA3 /* DateGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
