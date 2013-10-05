@@ -16,6 +16,10 @@
 @interface RegularWord : RegularBase
 + (RegularBase *)generat;
 @end
+@interface RegularAlphabet : RegularWord
+@end
+@interface RegularAll : RegularWord
+@end
 
 
 @implementation RegularBase {
@@ -33,11 +37,13 @@
             if ([s isEqualToString:@"\\"]) {
                 NSMutableString *next = [self push:regular].mutableCopy;
                 if ([next isEqualToString:@"w"]) {
-                    [str addObject:[RegularWord generat]];
+                    [str addObject:[RegularAlphabet generat]];
                 } else {
                     [str addObject:[RegularOneString generat:s]];
                     [str addObject:[RegularOneString generat:next]];
                 }
+            } else if ([s isEqualToString:@"."]){
+                [str addObject:[RegularAll generat]];
             } else {
                 [str addObject:[RegularOneString generat:s]];
             }
@@ -78,16 +84,22 @@
     return string;
 }
 @end
-@implementation RegularWord
+@implementation RegularWord {
+@protected
+    RandString *rand;
+}
 + (RegularBase *)generat {
     return [[self alloc] init];
 }
-
 - (NSString *)string {
-    return [[AsciiWord alloc] nextString];
+    return [rand nextString];
 }
 @end
-
+#define RWord(class, randClass) @implementation class \
+- init { self = [super init]; if (self) { rand = [randClass alloc]; } return self; }\
+@end
+RWord(RegularAlphabet, Alphabet)
+RWord(RegularAll, AsciiWord)
 
 @implementation RegularString
 

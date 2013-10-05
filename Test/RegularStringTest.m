@@ -22,5 +22,10 @@
     NSString *result = [[RegularString alloc] stringForRefular:sample];
     XCTAssertNotEqualObjects(result, sample, @"\\wはパターン");
 }
+- (void)testRegularTestDot {
+    NSString *sample = @"hoge.";
+    NSString *result = [[RegularString alloc] stringForRefular:sample];
+    XCTAssertNotEqualObjects(result, sample, @"\\wはパターン");
+}
 
 @end
