@@ -45,6 +45,9 @@
 @end
 @interface RegularBackslash : RegularWord
 @end
+@interface RegularRepeatZero : RegularBase
++ (RegularBase *)generat:(RegularBase *)regurla;
+@end
 
 
 @implementation RegularBase {
@@ -60,37 +63,15 @@
         while (regular.length != 0) {
             NSMutableString *s = [self push:regular].mutableCopy;
             if ([s isEqualToString:@"\\"]) {
-                NSMutableString *next = [self push:regular].mutableCopy;
-                if ([next isEqualToString:@"c"]) {
-                    [str addObject:[RegularAlphabet generat]];
-                } else if ([next isEqualToString:@"w"]) {
-                    [str addObject:[RegularWords generat]];
-                } else if ([next isEqualToString:@"s"]) {
-                    [str addObject:[RegularSpaceSet generat]];
-                } else if ([next isEqualToString:@"t"]) {
-                    [str addObject:[RegularHorizontalTab generat]];
-                } else if ([next isEqualToString:@"v"]) {
-                    [str addObject:[RegularVerticalTab generat]];
-                } else if ([next isEqualToString:@"n"]) {
-                    [str addObject:[RegularNewline generat]];
-                } else if ([next isEqualToString:@"r"]) {
-                    [str addObject:[RegularReturn generat]];
-                } else if ([next isEqualToString:@"b"]) {
-                    [str addObject:[RegularBackSpace generat]];
-                } else if ([next isEqualToString:@"f"]) {
-                    [str addObject:[RegularFormFeed generat]];
-                } else if ([next isEqualToString:@"a"]) {
-                    [str addObject:[RegularBell generat]];
-                } else if ([next isEqualToString:@"e"]) {
-                    [str addObject:[RegularEscape generat]];
-                } else if ([next isEqualToString:@"d"]) {
-                    [str addObject:[RegularNumber generat]];
-                } else if ([next isEqualToString:@"\\"]) {
-                    [str addObject:[RegularBackslash generat]];
-                } else {
+                id next = [self slishWord:regular];
+                if ([next isKindOfClass:[NSMutableString class]]) {
                     [str addObject:[RegularOneString generat:s]];
                     [str addObject:[RegularOneString generat:next]];
+                } else {
+                    [str addObject:next];
                 }
+            } else if ([s isEqualToString:@"*"]) {
+                str[str.count - 1] = [RegularRepeatZero generat:str[str.count - 1]];
             } else if ([s isEqualToString:@"."]){
                 [str addObject:[RegularAll generat]];
             } else {
@@ -99,6 +80,38 @@
         }
     }
     return self;
+}
+- (id)slishWord:(NSMutableString *)regular {
+    NSString *next = [self push:regular];
+    if ([next isEqualToString:@"c"]) {
+        return [RegularAlphabet generat];
+    } else if ([next isEqualToString:@"w"]) {
+        return [RegularWords generat];
+    } else if ([next isEqualToString:@"s"]) {
+        return [RegularSpaceSet generat];
+    } else if ([next isEqualToString:@"t"]) {
+        return [RegularHorizontalTab generat];
+    } else if ([next isEqualToString:@"v"]) {
+        return [RegularVerticalTab generat];
+    } else if ([next isEqualToString:@"n"]) {
+        return [RegularNewline generat];
+    } else if ([next isEqualToString:@"r"]) {
+        return [RegularReturn generat];
+    } else if ([next isEqualToString:@"b"]) {
+        return [RegularBackSpace generat];
+    } else if ([next isEqualToString:@"f"]) {
+        return [RegularFormFeed generat];
+    } else if ([next isEqualToString:@"a"]) {
+        return [RegularBell generat];
+    } else if ([next isEqualToString:@"e"]) {
+        return [RegularEscape generat];
+    } else if ([next isEqualToString:@"d"]) {
+        return [RegularNumber generat];
+    } else if ([next isEqualToString:@"\\"]) {
+        return [RegularBackslash generat];
+    } else {
+        return next.mutableCopy;
+    }
 }
 - (NSString *)push:(NSMutableString *)string {
     NSString *result = [string substringToIndex:1];
@@ -142,6 +155,30 @@
 }
 - (NSString *)string {
     return [rand nextString];
+}
+@end
+@implementation RegularRepeatZero {
+    RegularBase *r;
+    NSInteger length;
+}
++ (RegularBase *)generat:(RegularBase *)regular {
+    return [[self alloc] initWithRepeat:regular];
+}
+- (id)initWithRepeat:(RegularBase *)regular {
+    self = [super init];
+    if (self) {
+        r = regular;
+        length = 16;
+    }
+    return self;
+}
+- (NSString *)string {
+    NSMutableString *string = [NSMutableString string];
+    for (NSInteger i = 0; i < length; i++) {
+        [string appendString:[r string]];
+    }
+    return string;
+    
 }
 @end
 #define RWord(class, randClass) @implementation class \
