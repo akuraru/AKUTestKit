@@ -10,6 +10,7 @@
 #import "RandString.h"
 
 @interface RegularBase : NSObject
+- (NSString *)string;
 @end
 @interface RegularOneString : RegularBase
 @end
@@ -144,7 +145,7 @@
 }
 @end
 #define RWord(class, randClass) @implementation class \
-- init { self = [super init]; if (self) { rand = [randClass alloc]; } return self; }\
+- init { self = [super init]; if (self) { rand = [randClass sharedInstance]; } return self; }\
 @end
 RWord(RegularAlphabet, Alphabet)
 RWord(RegularWords, Words)

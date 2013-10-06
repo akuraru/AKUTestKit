@@ -81,43 +81,40 @@
 @end
 
 #define mSharedInstance \
-+ (instancetype)sharedInstance {\
-static id _instance;\
-static dispatch_once_t onceToken;\
-dispatch_once(&onceToken, ^{\
-_instance = [self new];\
-});\
-return _instance;\
-}
++ (instancetype)sharedInstance { static id _instance; static dispatch_once_t onceToken; dispatch_once(&onceToken, ^{ _instance = [self new]; }); return _instance; }
 
 #define cWordStringInheritance(name, from, to) \
 @implementation name \
 mSharedInstance\
-- (id)init {\
-self = [super init];\
-if (self) {\
-[self setRange:(CharMapping){from, to}];\
-}\
-return self;\
-}\
+- (id)init { self = [super init]; if (self) { [self setRange:(CharMapping){from, to}]; } return self; }\
 @end
 
-#define cSetStringInheritance(name, ...) \
+#define SingleWordStringInheritance(name, chara) \
 @implementation name \
-mSharedInstance \
-- (id)init {\
-self = [super init];\
-if (self) {\
-[self setWords:@[ __VA_ARGS__ ]];\
-}\
-return self;\
-}\
+mSharedInstance\
+- (id)init { self = [super init]; if (self) { [self setRange:(CharMapping){chara, chara+1}]; } return self; }\
 @end
+
+#define cSetStringInheritance(name, ...) @implementation name \
+mSharedInstance \
+- (id)init { self = [super init]; if (self) { [self setWords:@[ __VA_ARGS__ ]]; } return self; }\
+@end
+
+
 
 cWordStringInheritance(CaptalAlphabet, 0x41, 0x5a)
 cWordStringInheritance(LowerCaseAlphabet, 0x61, 0x7a)
 cWordStringInheritance(AsciiWord, 0x20, 0x7E)
 cWordStringInheritance(Number, 0x30, 0x39)
+cWordStringInheritance(Hiragana, 0x3041, 0x3093)
+cWordStringInheritance(Katakana, 0x30A1, 0x30F6)
+cWordStringInheritance(CommonKanji, 0x4E00, 0x9FA0)
+cWordStringInheritance(Kanji1, 0x3220, 0x3244)
+cWordStringInheritance(Kanji2, 0x3280, 0x32B0)
+cWordStringInheritance(Kanji3, 0x3400, 0x9FFF)
+cWordStringInheritance(Kanji4, 0xF900, 0xFAFF)
+cWordStringInheritance(Kanji5, 0x20000, 0x2FFFF)
+
 cWordStringInheritance(HorizontalTab, 0x09, 0x09)
 cWordStringInheritance(VerticalTab, 0x0B, 0x0B)
 cWordStringInheritance(Newline, 0x0A, 0x0A)
@@ -129,15 +126,6 @@ cWordStringInheritance(Escape, 0x1B, 0x1B)
 cWordStringInheritance(UnderBar, 0x5F, 0x5F)
 cWordStringInheritance(Backslash, 0x5c, 0x5c)
 cWordStringInheritance(Space, 0x20, 0x20)
-cWordStringInheritance(Hiragana, 0x3041, 0x3093)
-cWordStringInheritance(Katakana, 0x30A1, 0x30F6)
-cWordStringInheritance(CommonKanji, 0x4E00, 0x9FA0)
-cWordStringInheritance(Kanji1, 0x3220, 0x3244)
-cWordStringInheritance(Kanji2, 0x3280, 0x32B0)
-cWordStringInheritance(Kanji3, 0x3400, 0x9FFF)
-cWordStringInheritance(Kanji4, 0xF900, 0xFAFF)
-cWordStringInheritance(Kanji5, 0x20000, 0x2FFFF)
-
 
 cSetStringInheritance(Japanese,
                       [Hiragana sharedInstance],
