@@ -48,6 +48,8 @@
 @interface RegularRepeatZero : RegularBase
 + (RegularBase *)generat:(RegularBase *)regurla;
 @end
+@interface RegularRepeatOne : RegularRepeatZero
+@end
 
 
 @implementation RegularBase {
@@ -72,6 +74,8 @@
                 }
             } else if ([s isEqualToString:@"*"]) {
                 str[str.count - 1] = [RegularRepeatZero generat:str[str.count - 1]];
+            } else if ([s isEqualToString:@"+"]) {
+                str[str.count - 1] = [RegularRepeatOne generat:str[str.count - 1]];
             } else if ([s isEqualToString:@"."]){
                 [str addObject:[RegularAll generat]];
             } else {
@@ -157,30 +161,35 @@
     return [rand nextString];
 }
 @end
-@implementation RegularRepeatZero {
+@implementation RegularRepeatZero{
+@protected
     RegularBase *r;
+    NSInteger location;
     NSInteger length;
 }
 + (RegularBase *)generat:(RegularBase *)regular {
-    return [[self alloc] initWithRepeat:regular];
+    return [[self alloc] initWithRepeat:regular location:0 length:16];
 }
-- (id)initWithRepeat:(RegularBase *)regular {
+- (id)initWithRepeat:(RegularBase *)regular location:(NSInteger)loc length:(NSInteger)len{
     self = [super init];
     if (self) {
         r = regular;
-        length = 16;
+        location = loc;
+        length = len;
     }
     return self;
 }
 - (NSString *)string {
     NSMutableString *string = [NSMutableString string];
-    for (NSInteger i = 0; i < length; i++) {
+    NSInteger _len = arc4random_uniform(length - location) + location;
+    for (NSInteger i = 0; i < _len; i++) {
         [string appendString:[r string]];
     }
     return string;
     
 }
 @end
+
 #define RWord(class, randClass) @implementation class \
 - init { self = [super init]; if (self) { rand = [randClass sharedInstance]; } return self; }\
 @end
@@ -198,6 +207,11 @@ RWord(RegularBell, Bell)
 RWord(RegularEscape, Escape)
 RWord(RegularNumber, Number)
 RWord(RegularBackslash, Backslash)
+@implementation RegularRepeatOne
++ (RegularBase *)generat:(RegularBase *)regular {
+    return [[self alloc] initWithRepeat:regular location:1 length:16];
+}
+@end
 
 @implementation RegularString
 
