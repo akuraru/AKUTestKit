@@ -50,6 +50,8 @@
 @end
 @interface RegularRepeatOne : RegularRepeatZero
 @end
+@interface RegularQuestion : RegularRepeatZero
+@end
 
 @interface RegularGroupStart : RegularBase
 + (RegularBase *)generate;
@@ -84,6 +86,8 @@
                 str[str.count - 1] = [RegularRepeatZero generat:str[str.count - 1]];
             } else if ([s isEqualToString:@"+"]) {
                 str[str.count - 1] = [RegularRepeatOne generat:str[str.count - 1]];
+            } else if ([s isEqualToString:@"?"]) {
+                str[str.count - 1] = [RegularQuestion generat:str[str.count - 1]];
             } else if ([s isEqualToString:@"."]){
                 [str addObject:[RegularAll generat]];
             } else if ([s isEqualToString:@"("]) {
@@ -256,11 +260,14 @@ RWord(RegularBackslash, Backslash)
     return [[self alloc] initWithRepeat:regular location:1 length:16];
 }
 @end
+@implementation RegularQuestion
++ (RegularBase *)generat:(RegularBase *)regular {
+    return [[self alloc] initWithRepeat:regular location:0 length:1];
+}
+@end
 
 @implementation RegularString
-
 - (NSString *)stringForRefular:(NSString *)reg {
     return [[RegularBase generat:reg.mutableCopy] string];
 }
-
 @end
