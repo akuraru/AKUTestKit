@@ -51,8 +51,16 @@
 @interface RegularRepeatOne : RegularRepeatZero
 @end
 
+@interface RegularGroupStart : RegularBase
++ (RegularBase *)generate;
+@end
+@interface RegularGroup : RegularBase
++ (RegularBase *)generate:(NSArray *)_str;
+@end
+
 
 @implementation RegularBase {
+@protected
     NSMutableArray *str;
 }
 + (RegularBase *)generat:(NSMutableString *)string {
@@ -78,6 +86,20 @@
                 str[str.count - 1] = [RegularRepeatOne generat:str[str.count - 1]];
             } else if ([s isEqualToString:@"."]){
                 [str addObject:[RegularAll generat]];
+            } else if ([s isEqualToString:@"("]) {
+                [str addObject:[RegularGroupStart generate]];
+            } else if ([s isEqualToString:@")"]) {
+                NSInteger i = str.count - 1;
+                for (; 0 <= i; i--) {
+                    if ([str[i] isKindOfClass:[RegularGroupStart class]]) {
+                        break;
+                    }
+                }
+                [str removeObjectAtIndex:i];
+                NSRange renge = (NSRange){i, str.count - i};
+                NSArray *group = [str subarrayWithRange:renge];
+                [str removeObjectsInRange:renge];
+                [str addObject:[RegularGroup generate:group]];
             } else {
                 [str addObject:[RegularOneString generat:s]];
             }
@@ -188,6 +210,28 @@
     return string;
     
 }
+@end
+@implementation RegularGroupStart
++ (RegularBase *)generate {
+    return [[self alloc] init];
+}
+- (NSString *)string {
+    NSAssert(0, @"RegularGroupStart");
+    return @"";
+}
+@end
+@implementation RegularGroup
++ (RegularBase *)generate:(NSArray *)_str {
+    return [[self alloc] initWithArray:_str];
+}
+- (id)initWithArray:(NSArray *)_str {
+    self = [super init];
+    if (self) {
+        str = _str.mutableCopy;
+    }
+    return self;
+}
+
 @end
 
 #define RWord(class, randClass) @implementation class \

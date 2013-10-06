@@ -62,6 +62,13 @@
     XCTAssertTrue(1 <= result.length && result.length <= 16, @"repeat");
     XCTAssertTrue([self isMatch:result reg:sample], @"pattern match");
 }
+- (void)testRegularGroup {
+    NSString *sample = @"(ho)+";
+    NSString *result = [[RegularString alloc] stringForRefular:sample];
+    XCTAssertNotEqualObjects(result, @"(ho)+", @"そのままではない");
+    XCTAssertTrue(2 <= result.length && result.length <= 32, @"repeat");
+    XCTAssertTrue([self isMatch:result reg:sample], @"pattern match");
+}
 - (void)testRegular {
     NSString *sample = @"\\\\*";
     NSString *result = @"k";
