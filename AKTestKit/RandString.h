@@ -62,6 +62,8 @@ typedef struct {
 @end
 @interface UnderBar : WordsString
 @end
+@interface Backslash : WordsString
+@end
 @interface Space : WordsString
 @end
 @interface Hiragana : WordsString

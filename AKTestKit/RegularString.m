@@ -24,6 +24,8 @@
 @end
 @interface RegularSpaceSet : RegularWord
 @end
+@interface RegularNumber : RegularWord
+@end
 @interface RegularHorizontalTab : RegularWord
 @end
 @interface RegularVerticalTab : RegularWord
@@ -39,6 +41,8 @@
 @interface RegularBell : RegularWord
 @end
 @interface RegularEscape : RegularWord
+@end
+@interface RegularBackslash : RegularWord
 @end
 
 
@@ -78,6 +82,10 @@
                     [str addObject:[RegularBell generat]];
                 } else if ([next isEqualToString:@"e"]) {
                     [str addObject:[RegularEscape generat]];
+                } else if ([next isEqualToString:@"d"]) {
+                    [str addObject:[RegularNumber generat]];
+                } else if ([next isEqualToString:@"\\"]) {
+                    [str addObject:[RegularBackslash generat]];
                 } else {
                     [str addObject:[RegularOneString generat:s]];
                     [str addObject:[RegularOneString generat:next]];
@@ -150,7 +158,8 @@ RWord(RegularBackSpace, BackSpace)
 RWord(RegularFormFeed, FormFeed)
 RWord(RegularBell, Bell)
 RWord(RegularEscape, Escape)
-
+RWord(RegularNumber, Number)
+RWord(RegularBackslash, Backslash)
 
 @implementation RegularString
 
