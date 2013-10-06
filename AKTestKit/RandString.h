@@ -44,6 +44,26 @@ typedef struct {
 @end
 @interface Number : WordsString
 @end
+@interface HorizontalTab : WordsString
+@end
+@interface VerticalTab : WordsString
+@end
+@interface Newline : WordsString
+@end
+@interface Return : WordsString
+@end
+@interface BackSpace : WordsString
+@end
+@interface FormFeed : WordsString
+@end
+@interface Bell : WordsString
+@end
+@interface Escape : WordsString
+@end
+@interface UnderBar : WordsString
+@end
+@interface Space : WordsString
+@end
 @interface Hiragana : WordsString
 @end
 @interface Katakana : WordsString
@@ -63,7 +83,9 @@ typedef struct {
 
 @interface Japanese : SetString
 @end
-
-
 @interface Alphabet : SetString
+@end
+@interface Words : SetString
+@end
+@interface SpaseSet : SetString
 @end

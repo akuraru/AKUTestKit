@@ -118,6 +118,15 @@ cWordStringInheritance(CaptalAlphabet, 0x41, 0x5a)
 cWordStringInheritance(LowerCaseAlphabet, 0x61, 0x7a)
 cWordStringInheritance(AsciiWord, 0x20, 0x7E)
 cWordStringInheritance(Number, 0x30, 0x39)
+cWordStringInheritance(HorizontalTab, 0x09, 0x09)
+cWordStringInheritance(VerticalTab, 0x0B, 0x0B)
+cWordStringInheritance(Newline, 0x0A, 0x0A)
+cWordStringInheritance(Return, 0x0D, 0x0D)
+cWordStringInheritance(BackSpace, 0x08, 0x08)
+cWordStringInheritance(FormFeed, 0x0C, 0x0C)
+cWordStringInheritance(Bell, 0x07, 0x07)
+cWordStringInheritance(UnderBar, 0x5F, 0x5F)
+cWordStringInheritance(Space, 0x20, 0x20)
 cWordStringInheritance(Hiragana, 0x3041, 0x3093)
 cWordStringInheritance(Katakana, 0x30A1, 0x30F6)
 cWordStringInheritance(CommonKanji, 0x4E00, 0x9FA0)
@@ -137,4 +146,16 @@ cSetStringInheritance(Japanese,
 cSetStringInheritance(Alphabet,
                       [CaptalAlphabet sharedInstance],
                       [LowerCaseAlphabet sharedInstance],
+                      )
+cSetStringInheritance(Words,
+                      [Alphabet sharedInstance],
+                      [Number sharedInstance],
+                      [UnderBar sharedInstance]
+                      )
+cSetStringInheritance(SpaseSet,
+                      [Space sharedInstance],
+                      [HorizontalTab sharedInstance],
+                      [Return sharedInstance],
+                      [Newline sharedInstance],
+                      [FormFeed sharedInstance],
                       )
