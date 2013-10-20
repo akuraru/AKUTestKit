@@ -59,11 +59,15 @@
 @interface RegularGroup : RegularBase
 + (RegularBase *)generate:(NSArray *)_str;
 @end
+@interface RegularOR : RegularBase
++ (RegularBase *)generate;
+@end
 
 
 @implementation RegularBase {
 @protected
     NSMutableArray *str;
+    NSMutableArray *strings;
 }
 + (RegularBase *)generat:(NSMutableString *)string {
     return [[self alloc] initWithRegular:string];
@@ -71,45 +75,66 @@
 - (id)initWithRegular:(NSMutableString *)regular {
     self = [super init];
     if (self) {
-        str = [NSMutableArray array];
-        while (regular.length != 0) {
-            NSMutableString *s = [self push:regular].mutableCopy;
-            if ([s isEqualToString:@"\\"]) {
-                id next = [self slishWord:regular];
-                if ([next isKindOfClass:[NSMutableString class]]) {
-                    [str addObject:[RegularOneString generat:s]];
-                    [str addObject:[RegularOneString generat:next]];
-                } else {
-                    [str addObject:next];
-                }
-            } else if ([s isEqualToString:@"*"]) {
-                str[str.count - 1] = [RegularRepeatZero generat:str[str.count - 1]];
-            } else if ([s isEqualToString:@"+"]) {
-                str[str.count - 1] = [RegularRepeatOne generat:str[str.count - 1]];
-            } else if ([s isEqualToString:@"?"]) {
-                str[str.count - 1] = [RegularQuestion generat:str[str.count - 1]];
-            } else if ([s isEqualToString:@"."]){
-                [str addObject:[RegularAll generat]];
-            } else if ([s isEqualToString:@"("]) {
-                [str addObject:[RegularGroupStart generate]];
-            } else if ([s isEqualToString:@")"]) {
-                NSInteger i = str.count - 1;
-                for (; 0 <= i; i--) {
-                    if ([str[i] isKindOfClass:[RegularGroupStart class]]) {
-                        break;
-                    }
-                }
-                [str removeObjectAtIndex:i];
-                NSRange renge = (NSRange){i, str.count - i};
-                NSArray *group = [str subarrayWithRange:renge];
-                [str removeObjectsInRange:renge];
-                [str addObject:[RegularGroup generate:group]];
-            } else {
-                [str addObject:[RegularOneString generat:s]];
-            }
-        }
+        strings = [NSMutableArray array];
+        [self toObject:regular];
+        [self spliteOr];
     }
     return self;
+}
+- (void)toObject:(NSMutableString *)regular {
+    str = [NSMutableArray array];
+    while (regular.length != 0) {
+        NSMutableString *s = [self push:regular].mutableCopy;
+        if ([s isEqualToString:@"\\"]) {
+            id next = [self slishWord:regular];
+            if ([next isKindOfClass:[NSMutableString class]]) {
+                [str addObject:[RegularOneString generat:s]];
+                [str addObject:[RegularOneString generat:next]];
+            } else {
+                [str addObject:next];
+            }
+        } else if ([s isEqualToString:@"*"]) {
+            str[str.count - 1] = [RegularRepeatZero generat:str.lastObject];
+        } else if ([s isEqualToString:@"+"]) {
+            str[str.count - 1] = [RegularRepeatOne generat:str.lastObject];
+        } else if ([s isEqualToString:@"?"]) {
+            str[str.count - 1] = [RegularQuestion generat:str.lastObject];
+        } else if ([s isEqualToString:@"."]){
+            [str addObject:[RegularAll generat]];
+        } else if ([s isEqualToString:@"("]) {
+            [str addObject:[RegularGroupStart generate]];
+        } else if ([s isEqualToString:@"|"]) {
+            [str addObject:[RegularOR generate]];
+        } else if ([s isEqualToString:@")"]) {
+            NSInteger i = str.count - 1;
+            for (; 0 <= i; i--) {
+                if ([str[i] isKindOfClass:[RegularGroupStart class]]) {
+                    break;
+                }
+            }
+            [str removeObjectAtIndex:i];
+            NSRange renge = (NSRange){i, str.count - i};
+            NSArray *group = [str subarrayWithRange:renge];
+            [str removeObjectsInRange:renge];
+            [str addObject:[RegularGroup generate:group]];
+        } else {
+            [str addObject:[RegularOneString generat:s]];
+        }
+    }
+}
+- (void)spliteOr {
+    for (int i = 0, _len = str.count;i < _len; i ++) {
+        RegularBase *r = str[i];
+        if ([r isKindOfClass:RegularOR.class]) {
+            [strings addObject:[str subarrayWithRange:(NSRange){0, i}]];
+            str = [str subarrayWithRange:(NSRange){i + 1, _len - (i + 1)}].mutableCopy;
+            [self spliteOr];
+            return;
+        } else {
+            [r spliteOr];
+        }
+    }
+    [strings addObject:str];
 }
 - (id)slishWord:(NSMutableString *)regular {
     NSString *next = [self push:regular];
@@ -151,7 +176,7 @@
 
 - (NSString *)string {
     NSMutableString *string = [NSMutableString string];
-    for (RegularBase *rb in str) {
+    for (RegularBase *rb in strings[arc4random_uniform(strings.count)]) {
         [string appendString:[rb string]];
     }
     return string;
@@ -205,6 +230,9 @@
     }
     return self;
 }
+- (void)spliteOr {
+    [r spliteOr];
+}
 - (NSString *)string {
     NSMutableString *string = [NSMutableString string];
     NSInteger _len = arc4random_uniform(length - location) + location;
@@ -231,9 +259,20 @@
 - (id)initWithArray:(NSArray *)_str {
     self = [super init];
     if (self) {
+        strings = [NSMutableArray array];
         str = _str.mutableCopy;
     }
     return self;
+}
+
+@end
+@implementation RegularOR
++ (RegularBase *)generate {
+    return [[self alloc] init];
+}
+- (NSString *)string {
+    NSAssert(0, @"RegularGroupStart");
+    return @"";
 }
 
 @end

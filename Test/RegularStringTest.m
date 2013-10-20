@@ -81,5 +81,10 @@
     NSString *result = @"k";
     XCTAssertFalse([self isMatch:result reg:sample], @"pattern match");
 }
+- (void)testOr {
+    NSString *sample = @"a|b";
+    NSString *result = [[RegularString alloc] stringForRefular:sample];
+    XCTAssertTrue([result isEqual:@"a"] || [result isEqual:@"b"], @"a|b");
+}
 
 @end
