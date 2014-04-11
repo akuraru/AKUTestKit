@@ -1,13 +1,13 @@
 //
-//  RegularString.m
+//  AKURegularString.m
 //  AKTestFreamework
 //
 //  Created by P.I.akura on 2013/09/20.
 //  Copyright (c) 2013年 P.I.akura. All rights reserved.
 //
 
-#import "RegularString.h"
-#import "RandString.h"
+#import "AKURegularString.h"
+#import "AKURandString.h"
 
 @interface RegularBase : NSObject
 - (NSString *)string;
@@ -203,7 +203,7 @@
 @end
 @implementation RegularWord {
 @protected
-    RandString *rand;
+    AKURandString *rand;
 }
 + (RegularBase *)generat {
     return [[self alloc] init];
@@ -305,8 +305,8 @@ RWord(RegularBackslash, Backslash)
 }
 @end
 
-@implementation RegularString
-- (NSString *)stringForRefular:(NSString *)reg {
+@implementation AKURegularString
+- (NSString *)stringForRegular:(NSString *)reg {
     return [[RegularBase generat:reg.mutableCopy] string];
 }
 @end

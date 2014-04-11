@@ -1,5 +1,5 @@
 //
-//  RegularString.h
+//  AKURegularString.h
 //  AKTestFreamework
 //
 //  Created by P.I.akura on 2013/09/20.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RegularString : NSObject
+@interface AKURegularString : NSObject
 
-- (NSString *)stringForRefular:(NSString *)reg;
+- (NSString *)stringForRegular:(NSString *)reg;
 
 @end

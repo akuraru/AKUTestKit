@@ -6,10 +6,10 @@
 //
 
 
-#import "FixedDate.h"
+#import "AKUFixedDate.h"
 
 
-@implementation FixedDate {
+@implementation AKUFixedDate {
 
 }
 + (NSDate *)date {

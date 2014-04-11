@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface StringGenerator : NSObject
+@interface AKUStringGenerator : NSObject
 
 + (NSString *)alphabetWithRange:(NSRange)range;
 + (NSString *)asciiWordWithRange:(NSRange)range;

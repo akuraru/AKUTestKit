@@ -1,5 +1,5 @@
 //
-//  RandString.h
+//  AKURandString.h
 //  AKTestFreamework
 //
 //  Created by P.I.akura on 2013/09/20.
@@ -14,7 +14,7 @@ typedef struct {
     const UTF32Char toChar;
 } CharMapping;
 
-@interface RandString : NSObject {
+@interface AKURandString : NSObject {
     NSUInteger length;
 }
 - (NSString *)nextString;
@@ -23,12 +23,12 @@ typedef struct {
 - (NSString *)stringFromIndex:(NSInteger)index;
 @end
 
-@interface WordsString :RandString {
+@interface WordsString : AKURandString {
     NSUInteger location;
 }
 - (void)setRange:(CharMapping)charMapping;
 @end
-@interface SetString : RandString {
+@interface SetString : AKURandString {
     NSArray *words;
 }
 - (void)setWords:(NSArray *)w;

@@ -6,13 +6,13 @@
 //
 
 
-#import "ListFunctional.h"
-#import "NumberGenerator.h"
+#import "AKUListFunctional.h"
+#import "AKUNumberGenerator.h"
 
-@implementation ListFunctional {
+@implementation AKUListFunctional {
 }
 + (NSArray *)randomSort:(NSArray *)array {
-    NSArray *numbers = [NumberGenerator randomArrayWithPiece:array.count];
+    NSArray *numbers = [AKUNumberGenerator randomArrayWithPiece:array.count];
     NSMutableArray *a = [NSMutableArray array];
     for (NSNumber *n in numbers) {
         [a addObject:array[n.unsignedIntegerValue]];

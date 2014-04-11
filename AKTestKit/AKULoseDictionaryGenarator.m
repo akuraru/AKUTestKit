@@ -6,11 +6,11 @@
 //
 
 
-#import "LoseDictionaryGenarator.h"
-#import "ListFunctional.h"
+#import "AKULoseDictionaryGenarator.h"
+#import "AKUListFunctional.h"
 
 
-@implementation LoseDictionaryGenarator {
+@implementation AKULoseDictionaryGenarator {
 }
 
 + (NSDictionary *)lose:(NSDictionary *)dict {
@@ -18,7 +18,7 @@
 }
 + (NSDictionary *)lose:(NSDictionary *)dict dropsNum:(NSUInteger)num {
     NSMutableDictionary *d = [NSMutableDictionary dictionary];
-    for (NSString *key in [ListFunctional take:[ListFunctional randomSort:dict.allKeys] length:dict.count - num]) {
+    for (NSString *key in [AKUListFunctional take:[AKUListFunctional randomSort:dict.allKeys] length:dict.count - num]) {
         [d setObject:dict[key] forKey:key];
     }
     return d;

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DateGenerator : NSObject
+@interface AKUDateGenerator : NSObject
 
 + (NSDate *)between:(NSDate *)begin end:(NSDate *)end;
 

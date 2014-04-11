@@ -6,10 +6,10 @@
 //
 
 
-#import "StringGenerator.h"
-#import "RandString.h"
+#import "AKUStringGenerator.h"
+#import "AKURandString.h"
 
-@implementation StringGenerator
+@implementation AKUStringGenerator
 
 + (NSInteger)randBetween:(NSRange)range {
     return arc4random_uniform(range.length) + range.location;
@@ -39,7 +39,7 @@
 + (NSString *)japaneseWithLength:(NSUInteger) length {
     return [self randomString:length instance:[Japanese sharedInstance]];
 }
-+ (NSString *)randomString:(NSUInteger)length instance:(RandString *)instance {
++ (NSString *)randomString:(NSUInteger)length instance:(AKURandString *)instance {
     // FIXME: Doesn't actually random
     NSMutableString *results = [NSMutableString string];
     for (NSUInteger i = 0; i < length; i++) {

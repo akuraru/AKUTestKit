@@ -6,10 +6,10 @@
 //
 
 
-#import "NumberGenerator.h"
+#import "AKUNumberGenerator.h"
 
 
-@implementation NumberGenerator {
+@implementation AKUNumberGenerator {
 }
 + (NSArray *)randomArrayWithPiece:(NSUInteger)piece {
     NSMutableArray *array = [self arrayWithPiece:piece];

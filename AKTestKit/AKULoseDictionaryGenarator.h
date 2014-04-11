@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NumberGenerator : NSObject
 
-+ (NSArray *)randomArrayWithPiece:(NSUInteger)piece;
+@interface AKULoseDictionaryGenarator : NSObject
 
-+ (NSMutableArray *)arrayWithPiece:(NSUInteger)piece;
++ (NSDictionary *)lose:(NSDictionary *)dict;
++ (NSDictionary *)lose:(NSDictionary *)dict dropsNum:(NSUInteger)num;
 
-+ (NSUInteger)between:(NSInteger)begin end:(NSInteger)end;
 @end

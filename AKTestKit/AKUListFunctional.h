@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface ListFunctional : NSObject
+@interface AKUListFunctional : NSObject
 
 + (NSArray *)randomSort:(NSArray *)array;
 

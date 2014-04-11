@@ -13,14 +13,14 @@
 		BEFA23E617FFDBC000453AA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E517FFDBC000453AA3 /* UIKit.framework */; };
 		BEFA23EC17FFDBC000453AA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEFA23EA17FFDBC000453AA3 /* InfoPlist.strings */; };
 		BEFA23EE17FFDBC000453AA3 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23ED17FFDBC000453AA3 /* Test.m */; };
-		BEFA240417FFDBD800453AA3 /* DateGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23F517FFDBD800453AA3 /* DateGenerator.m */; };
-		BEFA240517FFDBD800453AA3 /* FixedDate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23F717FFDBD800453AA3 /* FixedDate.m */; };
-		BEFA240617FFDBD800453AA3 /* ListFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23F917FFDBD800453AA3 /* ListFunctional.m */; };
-		BEFA240717FFDBD800453AA3 /* LoseDictionaryGenarator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23FB17FFDBD800453AA3 /* LoseDictionaryGenarator.m */; };
-		BEFA240817FFDBD800453AA3 /* NumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23FD17FFDBD800453AA3 /* NumberGenerator.m */; };
-		BEFA240917FFDBD800453AA3 /* RandString.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23FF17FFDBD800453AA3 /* RandString.m */; };
-		BEFA240A17FFDBD800453AA3 /* RegularString.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240117FFDBD800453AA3 /* RegularString.m */; };
-		BEFA240B17FFDBD800453AA3 /* StringGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240317FFDBD800453AA3 /* StringGenerator.m */; };
+		BEFA240417FFDBD800453AA3 /* AKUDateGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23F517FFDBD800453AA3 /* AKUDateGenerator.m */; };
+		BEFA240517FFDBD800453AA3 /* AKUFixedDate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23F717FFDBD800453AA3 /* AKUFixedDate.m */; };
+		BEFA240617FFDBD800453AA3 /* AKUListFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23F917FFDBD800453AA3 /* AKUListFunctional.m */; };
+		BEFA240717FFDBD800453AA3 /* AKULoseDictionaryGenarator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23FB17FFDBD800453AA3 /* AKULoseDictionaryGenarator.m */; };
+		BEFA240817FFDBD800453AA3 /* AKUNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23FD17FFDBD800453AA3 /* AKUNumberGenerator.m */; };
+		BEFA240917FFDBD800453AA3 /* AKURandString.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA23FF17FFDBD800453AA3 /* AKURandString.m */; };
+		BEFA240A17FFDBD800453AA3 /* AKURegularString.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240117FFDBD800453AA3 /* AKURegularString.m */; };
+		BEFA240B17FFDBD800453AA3 /* AKUStringGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240317FFDBD800453AA3 /* AKUStringGenerator.m */; };
 		BEFA240E17FFDBE100453AA3 /* RegularStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */; };
 /* End PBXBuildFile section */
 
@@ -34,22 +34,22 @@
 		BEFA23EB17FFDBC000453AA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEFA23ED17FFDBC000453AA3 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		BEFA23EF17FFDBC000453AA3 /* Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
-		BEFA23F417FFDBD800453AA3 /* DateGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateGenerator.h; sourceTree = "<group>"; };
-		BEFA23F517FFDBD800453AA3 /* DateGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateGenerator.m; sourceTree = "<group>"; };
-		BEFA23F617FFDBD800453AA3 /* FixedDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedDate.h; sourceTree = "<group>"; };
-		BEFA23F717FFDBD800453AA3 /* FixedDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedDate.m; sourceTree = "<group>"; };
-		BEFA23F817FFDBD800453AA3 /* ListFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFunctional.h; sourceTree = "<group>"; };
-		BEFA23F917FFDBD800453AA3 /* ListFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFunctional.m; sourceTree = "<group>"; };
-		BEFA23FA17FFDBD800453AA3 /* LoseDictionaryGenarator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoseDictionaryGenarator.h; sourceTree = "<group>"; };
-		BEFA23FB17FFDBD800453AA3 /* LoseDictionaryGenarator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoseDictionaryGenarator.m; sourceTree = "<group>"; };
-		BEFA23FC17FFDBD800453AA3 /* NumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberGenerator.h; sourceTree = "<group>"; };
-		BEFA23FD17FFDBD800453AA3 /* NumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberGenerator.m; sourceTree = "<group>"; };
-		BEFA23FE17FFDBD800453AA3 /* RandString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandString.h; sourceTree = "<group>"; };
-		BEFA23FF17FFDBD800453AA3 /* RandString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandString.m; sourceTree = "<group>"; };
-		BEFA240017FFDBD800453AA3 /* RegularString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularString.h; sourceTree = "<group>"; };
-		BEFA240117FFDBD800453AA3 /* RegularString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularString.m; sourceTree = "<group>"; };
-		BEFA240217FFDBD800453AA3 /* StringGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringGenerator.h; sourceTree = "<group>"; };
-		BEFA240317FFDBD800453AA3 /* StringGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringGenerator.m; sourceTree = "<group>"; };
+		BEFA23F417FFDBD800453AA3 /* AKUDateGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUDateGenerator.h; sourceTree = "<group>"; };
+		BEFA23F517FFDBD800453AA3 /* AKUDateGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUDateGenerator.m; sourceTree = "<group>"; };
+		BEFA23F617FFDBD800453AA3 /* AKUFixedDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUFixedDate.h; sourceTree = "<group>"; };
+		BEFA23F717FFDBD800453AA3 /* AKUFixedDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUFixedDate.m; sourceTree = "<group>"; };
+		BEFA23F817FFDBD800453AA3 /* AKUListFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUListFunctional.h; sourceTree = "<group>"; };
+		BEFA23F917FFDBD800453AA3 /* AKUListFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUListFunctional.m; sourceTree = "<group>"; };
+		BEFA23FA17FFDBD800453AA3 /* AKULoseDictionaryGenarator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKULoseDictionaryGenarator.h; sourceTree = "<group>"; };
+		BEFA23FB17FFDBD800453AA3 /* AKULoseDictionaryGenarator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKULoseDictionaryGenarator.m; sourceTree = "<group>"; };
+		BEFA23FC17FFDBD800453AA3 /* AKUNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUNumberGenerator.h; sourceTree = "<group>"; };
+		BEFA23FD17FFDBD800453AA3 /* AKUNumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUNumberGenerator.m; sourceTree = "<group>"; };
+		BEFA23FE17FFDBD800453AA3 /* AKURandString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKURandString.h; sourceTree = "<group>"; };
+		BEFA23FF17FFDBD800453AA3 /* AKURandString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKURandString.m; sourceTree = "<group>"; };
+		BEFA240017FFDBD800453AA3 /* AKURegularString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKURegularString.h; sourceTree = "<group>"; };
+		BEFA240117FFDBD800453AA3 /* AKURegularString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKURegularString.m; sourceTree = "<group>"; };
+		BEFA240217FFDBD800453AA3 /* AKUStringGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUStringGenerator.h; sourceTree = "<group>"; };
+		BEFA240317FFDBD800453AA3 /* AKUStringGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUStringGenerator.m; sourceTree = "<group>"; };
 		BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularStringTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,22 +119,22 @@
 		BEFA23F317FFDBD800453AA3 /* AKTestKit */ = {
 			isa = PBXGroup;
 			children = (
-				BEFA23F417FFDBD800453AA3 /* DateGenerator.h */,
-				BEFA23F517FFDBD800453AA3 /* DateGenerator.m */,
-				BEFA23F617FFDBD800453AA3 /* FixedDate.h */,
-				BEFA23F717FFDBD800453AA3 /* FixedDate.m */,
-				BEFA23F817FFDBD800453AA3 /* ListFunctional.h */,
-				BEFA23F917FFDBD800453AA3 /* ListFunctional.m */,
-				BEFA23FA17FFDBD800453AA3 /* LoseDictionaryGenarator.h */,
-				BEFA23FB17FFDBD800453AA3 /* LoseDictionaryGenarator.m */,
-				BEFA23FC17FFDBD800453AA3 /* NumberGenerator.h */,
-				BEFA23FD17FFDBD800453AA3 /* NumberGenerator.m */,
-				BEFA23FE17FFDBD800453AA3 /* RandString.h */,
-				BEFA23FF17FFDBD800453AA3 /* RandString.m */,
-				BEFA240017FFDBD800453AA3 /* RegularString.h */,
-				BEFA240117FFDBD800453AA3 /* RegularString.m */,
-				BEFA240217FFDBD800453AA3 /* StringGenerator.h */,
-				BEFA240317FFDBD800453AA3 /* StringGenerator.m */,
+				BEFA23F417FFDBD800453AA3 /* AKUDateGenerator.h */,
+				BEFA23F517FFDBD800453AA3 /* AKUDateGenerator.m */,
+				BEFA23F617FFDBD800453AA3 /* AKUFixedDate.h */,
+				BEFA23F717FFDBD800453AA3 /* AKUFixedDate.m */,
+				BEFA23F817FFDBD800453AA3 /* AKUListFunctional.h */,
+				BEFA23F917FFDBD800453AA3 /* AKUListFunctional.m */,
+				BEFA23FA17FFDBD800453AA3 /* AKULoseDictionaryGenarator.h */,
+				BEFA23FB17FFDBD800453AA3 /* AKULoseDictionaryGenarator.m */,
+				BEFA23FC17FFDBD800453AA3 /* AKUNumberGenerator.h */,
+				BEFA23FD17FFDBD800453AA3 /* AKUNumberGenerator.m */,
+				BEFA23FE17FFDBD800453AA3 /* AKURandString.h */,
+				BEFA23FF17FFDBD800453AA3 /* AKURandString.m */,
+				BEFA240017FFDBD800453AA3 /* AKURegularString.h */,
+				BEFA240117FFDBD800453AA3 /* AKURegularString.m */,
+				BEFA240217FFDBD800453AA3 /* AKUStringGenerator.h */,
+				BEFA240317FFDBD800453AA3 /* AKUStringGenerator.m */,
 			);
 			path = AKTestKit;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 		BEFA23D417FFDBA200453AA3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = BEFA23D717FFDBA200453AA3 /* Build configuration list for PBXProject "AKTestKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -200,17 +200,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEFA240817FFDBD800453AA3 /* NumberGenerator.m in Sources */,
-				BEFA240517FFDBD800453AA3 /* FixedDate.m in Sources */,
+				BEFA240817FFDBD800453AA3 /* AKUNumberGenerator.m in Sources */,
+				BEFA240517FFDBD800453AA3 /* AKUFixedDate.m in Sources */,
 				BE46333A187042350076C4A0 /* NumberGeneratorTest.m in Sources */,
 				BEFA23EE17FFDBC000453AA3 /* Test.m in Sources */,
-				BEFA240A17FFDBD800453AA3 /* RegularString.m in Sources */,
-				BEFA240717FFDBD800453AA3 /* LoseDictionaryGenarator.m in Sources */,
+				BEFA240A17FFDBD800453AA3 /* AKURegularString.m in Sources */,
+				BEFA240717FFDBD800453AA3 /* AKULoseDictionaryGenarator.m in Sources */,
 				BEFA240E17FFDBE100453AA3 /* RegularStringTest.m in Sources */,
-				BEFA240917FFDBD800453AA3 /* RandString.m in Sources */,
-				BEFA240617FFDBD800453AA3 /* ListFunctional.m in Sources */,
-				BEFA240B17FFDBD800453AA3 /* StringGenerator.m in Sources */,
-				BEFA240417FFDBD800453AA3 /* DateGenerator.m in Sources */,
+				BEFA240917FFDBD800453AA3 /* AKURandString.m in Sources */,
+				BEFA240617FFDBD800453AA3 /* AKUListFunctional.m in Sources */,
+				BEFA240B17FFDBD800453AA3 /* AKUStringGenerator.m in Sources */,
+				BEFA240417FFDBD800453AA3 /* AKUDateGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +231,7 @@
 		BEFA23D817FFDBA200453AA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -244,7 +245,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -292,7 +292,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

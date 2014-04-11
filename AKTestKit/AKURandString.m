@@ -1,14 +1,14 @@
 //
-//  RandString.m
+//  AKURandString.m
 //  AKTestFreamework
 //
 //  Created by P.I.akura on 2013/09/20.
 //  Copyright (c) 2013年 P.I.akura. All rights reserved.
 //
 
-#import "RandString.h"
+#import "AKURandString.h"
 
-@implementation RandString
+@implementation AKURandString
 + (instancetype)sharedInstance {
     return nil;
 }
@@ -58,7 +58,7 @@
     return [self stringFromIndex:arc4random_uniform(length)];
 }
 - (NSString *)stringFromIndex:(NSInteger)index {
-    for (RandString *rs in words) {
+    for (AKURandString *rs in words) {
         if (index < rs.length) {
             return [rs stringFromIndex:index];
         } else {
@@ -73,7 +73,7 @@
 }
 - (NSInteger)sumLength:(NSArray *)w {
     NSInteger l = 0;
-    for (RandString *rs in w) {
+    for (AKURandString *rs in w) {
         l += [rs length];
     }
     return l;

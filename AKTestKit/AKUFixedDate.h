@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface FixedDate : NSObject
+@interface AKUFixedDate : NSObject
 
 + (NSDate *)date;
 + (NSString *)string;
