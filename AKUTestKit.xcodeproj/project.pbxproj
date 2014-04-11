@@ -70,7 +70,7 @@
 		BEFA23D317FFDBA200453AA3 = {
 			isa = PBXGroup;
 			children = (
-				BEFA23F317FFDBD800453AA3 /* AKTestKit */,
+				BEFA23F317FFDBD800453AA3 /* lib */,
 				BEFA23E717FFDBC000453AA3 /* Test */,
 				BEFA23E017FFDBC000453AA3 /* Frameworks */,
 				BEFA23DF17FFDBC000453AA3 /* Products */,
@@ -116,7 +116,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BEFA23F317FFDBD800453AA3 /* AKTestKit */ = {
+		BEFA23F317FFDBD800453AA3 /* lib */ = {
 			isa = PBXGroup;
 			children = (
 				BEFA23F417FFDBD800453AA3 /* AKUDateGenerator.h */,
@@ -136,7 +136,7 @@
 				BEFA240217FFDBD800453AA3 /* AKUStringGenerator.h */,
 				BEFA240317FFDBD800453AA3 /* AKUStringGenerator.m */,
 			);
-			path = AKTestKit;
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +167,7 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = BEFA23D717FFDBA200453AA3 /* Build configuration list for PBXProject "AKTestKit" */;
+			buildConfigurationList = BEFA23D717FFDBA200453AA3 /* Build configuration list for PBXProject "AKUTestKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -332,7 +332,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEFA23D717FFDBA200453AA3 /* Build configuration list for PBXProject "AKTestKit" */ = {
+		BEFA23D717FFDBA200453AA3 /* Build configuration list for PBXProject "AKUTestKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEFA23D817FFDBA200453AA3 /* Debug */,
