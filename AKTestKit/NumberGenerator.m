@@ -14,25 +14,24 @@
 + (NSArray *)randomArrayWithPiece:(NSUInteger)piece {
     NSMutableArray *array = [self arrayWithPiece:piece];
     for (NSUInteger i = 0; i < piece; i++) {
-        [self swap:array x:i y:[self between:i end:piece]];
+        [array exchangeObjectAtIndex:i withObjectAtIndex:[self between:i end:piece]];
     }
     return array;
 }
 
-+ (void)swap:(NSMutableArray *)array x:(NSUInteger)x y:(NSUInteger)y {
-    id o = array[x];
-    array[x] = array[y];
-    array[y] = o;
-}
-
 + (NSMutableArray *)arrayWithPiece:(NSUInteger)piece {
-    NSMutableArray *array = [NSMutableArray array];
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:piece];
     for (int i = 0; i < piece; i++) {
         [array addObject:@(i)];
     }
     return array;
 }
 + (NSUInteger)between:(NSInteger)begin end:(NSInteger)end {
-    return arc4random_uniform(end -begin) + begin;
+    if (begin <= end) {
+        return begin;
+    } else {
+        u_int32_t i = (u_int32_t)(end - begin);
+        return arc4random_uniform(i) + begin;
+    }
 }
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE46333A187042350076C4A0 /* NumberGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BE463339187042350076C4A0 /* NumberGeneratorTest.m */; };
 		BEFA23E217FFDBC000453AA3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E117FFDBC000453AA3 /* XCTest.framework */; };
 		BEFA23E417FFDBC000453AA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E317FFDBC000453AA3 /* Foundation.framework */; };
 		BEFA23E617FFDBC000453AA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E517FFDBC000453AA3 /* UIKit.framework */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE463339187042350076C4A0 /* NumberGeneratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberGeneratorTest.m; sourceTree = "<group>"; };
 		BEFA23DE17FFDBC000453AA3 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFA23E117FFDBC000453AA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BEFA23E317FFDBC000453AA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -99,6 +101,7 @@
 				BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */,
 				BEFA23ED17FFDBC000453AA3 /* Test.m */,
 				BEFA23E817FFDBC000453AA3 /* Supporting Files */,
+				BE463339187042350076C4A0 /* NumberGeneratorTest.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				BEFA240817FFDBD800453AA3 /* NumberGenerator.m in Sources */,
 				BEFA240517FFDBD800453AA3 /* FixedDate.m in Sources */,
+				BE46333A187042350076C4A0 /* NumberGeneratorTest.m in Sources */,
 				BEFA23EE17FFDBC000453AA3 /* Test.m in Sources */,
 				BEFA240A17FFDBD800453AA3 /* RegularString.m in Sources */,
 				BEFA240717FFDBD800453AA3 /* LoseDictionaryGenarator.m in Sources */,
@@ -345,6 +349,7 @@
 				BEFA23F217FFDBC000453AA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
