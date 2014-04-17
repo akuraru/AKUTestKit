@@ -25,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE3AB18818FF814500D0AB3E /* AKUTestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKUTestKit.h; sourceTree = "<group>"; };
 		BE463339187042350076C4A0 /* NumberGeneratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberGeneratorTest.m; sourceTree = "<group>"; };
 		BEFA23DE17FFDBC000453AA3 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFA23E117FFDBC000453AA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -135,6 +136,7 @@
 				BEFA240117FFDBD800453AA3 /* AKURegularString.m */,
 				BEFA240217FFDBD800453AA3 /* AKUStringGenerator.h */,
 				BEFA240317FFDBD800453AA3 /* AKUStringGenerator.m */,
+				BE3AB18818FF814500D0AB3E /* AKUTestKit.h */,
 			);
 			path = lib;
 			sourceTree = "<group>";
