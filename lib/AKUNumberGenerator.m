@@ -26,11 +26,11 @@
     }
     return array;
 }
-+ (NSUInteger)between:(NSInteger)begin end:(NSInteger)end {
-    if (begin <= end) {
++ (NSUInteger)between:(NSUInteger)begin end:(NSUInteger)end {
+    if (begin >= end) {
         return begin;
     } else {
-        u_int32_t i = (u_int32_t)(end - begin);
+        u_int32_t i = (u_int32_t)(end + 1 - begin);
         return arc4random_uniform(i) + begin;
     }
 }

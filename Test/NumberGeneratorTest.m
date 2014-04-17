@@ -16,8 +16,30 @@
 }
 
 - (void)testBetweenFrom0to2 {
-    NSInteger result = [AKUNumberGenerator between:0 end:1];
+    NSInteger result = [AKUNumberGenerator between:0 end:2];
     XCTAssertTrue(result == 0 || result == 1 || result == 2, @"");
+}
+
+- (void)testAllBetweenFrom0to2 {
+    NSMutableSet *set = [NSMutableSet set];
+    for (int i = 0; i < 100; i++) {
+        [set addObject:@([AKUNumberGenerator between:0 end:2])];
+        if (set.count == 3)
+            break;
+    }
+    NSSet *result = [NSSet setWithObjects:@0, @1, @2, nil];
+    XCTAssertEqualObjects(set, result, @"");
+}
+
+- (void)testAllBetweenFrom_1to1 {
+    NSMutableSet *set = [NSMutableSet set];
+    for (int i = 0; i < 100; i++) {
+        [set addObject:@([AKUNumberGenerator between:10 end:13])];
+        if (set.count == 4)
+            break;
+    }
+    NSSet *result = [NSSet setWithObjects:@10, @11, @12, @13, nil];
+    XCTAssertEqualObjects(set, result, @"");
 }
 
 - (void)testBoolean {
