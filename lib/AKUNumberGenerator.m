@@ -34,4 +34,8 @@
         return arc4random_uniform(i) + begin;
     }
 }
+
++ (NSNumber *)boolean {
+    return @((BOOL)arc4random_uniform(2));
+}
 @end

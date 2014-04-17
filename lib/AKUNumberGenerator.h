@@ -15,4 +15,6 @@
 + (NSMutableArray *)arrayWithPiece:(NSUInteger)piece;
 
 + (NSUInteger)between:(NSInteger)begin end:(NSInteger)end;
+
++ (NSNumber *)boolean;
 @end
