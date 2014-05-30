@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1610B1D95EAA4C99ADCA0610 /* libPods-Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B22BEF3D5D14389B5AFC052 /* libPods-Test.a */; };
-		BE46333A187042350076C4A0 /* NumberGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BE463339187042350076C4A0 /* NumberGeneratorTest.m */; };
 		BEFA23E217FFDBC000453AA3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E117FFDBC000453AA3 /* XCTest.framework */; };
 		BEFA23E417FFDBC000453AA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E317FFDBC000453AA3 /* Foundation.framework */; };
 		BEFA23E617FFDBC000453AA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E517FFDBC000453AA3 /* UIKit.framework */; };
@@ -23,13 +22,13 @@
 		BEFA240A17FFDBD800453AA3 /* AKURegularString.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240117FFDBD800453AA3 /* AKURegularString.m */; };
 		BEFA240B17FFDBD800453AA3 /* AKUStringGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240317FFDBD800453AA3 /* AKUStringGenerator.m */; };
 		BEFA240E17FFDBE100453AA3 /* RegularStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */; };
+		C8790784374368B7934986D9 /* NumberSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C879088E994F5D8C79DD50C7 /* NumberSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		339226C3111C4A1AA706FC9B /* Pods-Test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.xcconfig"; path = "Pods/Pods-Test.xcconfig"; sourceTree = "<group>"; };
 		5B22BEF3D5D14389B5AFC052 /* libPods-Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3AB18818FF814500D0AB3E /* AKUTestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKUTestKit.h; sourceTree = "<group>"; };
-		BE463339187042350076C4A0 /* NumberGeneratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberGeneratorTest.m; sourceTree = "<group>"; };
 		BEFA23DE17FFDBC000453AA3 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFA23E117FFDBC000453AA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BEFA23E317FFDBC000453AA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -55,6 +54,7 @@
 		BEFA240217FFDBD800453AA3 /* AKUStringGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUStringGenerator.h; sourceTree = "<group>"; };
 		BEFA240317FFDBD800453AA3 /* AKUStringGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUStringGenerator.m; sourceTree = "<group>"; };
 		BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularStringTest.m; sourceTree = "<group>"; };
+		C879088E994F5D8C79DD50C7 /* NumberSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 				BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */,
 				BEFA23ED17FFDBC000453AA3 /* Test.m */,
 				BEFA23E817FFDBC000453AA3 /* Supporting Files */,
-				BE463339187042350076C4A0 /* NumberGeneratorTest.m */,
+				C879088E994F5D8C79DD50C7 /* NumberSpec.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -187,8 +187,6 @@
 			mainGroup = BEFA23D317FFDBA200453AA3;
 			productRefGroup = BEFA23DF17FFDBC000453AA3 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				BEFA23DD17FFDBC000453AA3 /* Test */,
@@ -247,7 +245,6 @@
 			files = (
 				BEFA240817FFDBD800453AA3 /* AKUNumberGenerator.m in Sources */,
 				BEFA240517FFDBD800453AA3 /* AKUFixedDate.m in Sources */,
-				BE46333A187042350076C4A0 /* NumberGeneratorTest.m in Sources */,
 				BEFA23EE17FFDBC000453AA3 /* Test.m in Sources */,
 				BEFA240A17FFDBD800453AA3 /* AKURegularString.m in Sources */,
 				BEFA240717FFDBD800453AA3 /* AKULoseDictionaryGenarator.m in Sources */,
@@ -256,6 +253,7 @@
 				BEFA240617FFDBD800453AA3 /* AKUListFunctional.m in Sources */,
 				BEFA240B17FFDBD800453AA3 /* AKUStringGenerator.m in Sources */,
 				BEFA240417FFDBD800453AA3 /* AKUDateGenerator.m in Sources */,
+				C8790784374368B7934986D9 /* NumberSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
