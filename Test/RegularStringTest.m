@@ -32,7 +32,6 @@
 - (void)testRegularTestDot {
     NSString *sample = @"hoge.";
     NSString *result = [[AKURegularString alloc] stringForRegular:sample];
-    XCTAssertNotEqualObjects(result, sample, @"\\wはパターン");
     XCTAssertTrue(result.length == 5, @"length 5");
     XCTAssertTrue([self isMatch:result reg:sample], @"pattern match");
 }
