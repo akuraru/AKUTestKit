@@ -22,12 +22,7 @@
 + (NSArray *)take:(NSArray *)array length:(NSUInteger)length {
     if (array.count < length)
         return array;
-
-    NSMutableArray *a = [NSMutableArray array];
-    for (NSUInteger i = 0; i < length; i ++) {
-        [a addObject:array[i]];
-    }
-    return a;
+    return [array subarrayWithRange:NSMakeRange(0, length)];
 }
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1610B1D95EAA4C99ADCA0610 /* libPods-Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B22BEF3D5D14389B5AFC052 /* libPods-Test.a */; };
+		BEAB86A0193961BE0098E80F /* AKUInfinityListSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAB869F193961BE0098E80F /* AKUInfinityListSpec.m */; };
+		BEAB86A3193961EB0098E80F /* AKUInfinityList.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAB86A2193961EB0098E80F /* AKUInfinityList.m */; };
 		BEFA23E217FFDBC000453AA3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E117FFDBC000453AA3 /* XCTest.framework */; };
 		BEFA23E417FFDBC000453AA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E317FFDBC000453AA3 /* Foundation.framework */; };
 		BEFA23E617FFDBC000453AA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFA23E517FFDBC000453AA3 /* UIKit.framework */; };
@@ -29,6 +31,9 @@
 		339226C3111C4A1AA706FC9B /* Pods-Test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.xcconfig"; path = "Pods/Pods-Test.xcconfig"; sourceTree = "<group>"; };
 		5B22BEF3D5D14389B5AFC052 /* libPods-Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3AB18818FF814500D0AB3E /* AKUTestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKUTestKit.h; sourceTree = "<group>"; };
+		BEAB869F193961BE0098E80F /* AKUInfinityListSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUInfinityListSpec.m; sourceTree = "<group>"; };
+		BEAB86A1193961EB0098E80F /* AKUInfinityList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUInfinityList.h; sourceTree = "<group>"; };
+		BEAB86A2193961EB0098E80F /* AKUInfinityList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUInfinityList.m; sourceTree = "<group>"; };
 		BEFA23DE17FFDBC000453AA3 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFA23E117FFDBC000453AA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BEFA23E317FFDBC000453AA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -109,6 +114,7 @@
 				BEFA23ED17FFDBC000453AA3 /* Test.m */,
 				BEFA23E817FFDBC000453AA3 /* Supporting Files */,
 				C879088E994F5D8C79DD50C7 /* NumberSpec.m */,
+				BEAB869F193961BE0098E80F /* AKUInfinityListSpec.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 				BEFA240217FFDBD800453AA3 /* AKUStringGenerator.h */,
 				BEFA240317FFDBD800453AA3 /* AKUStringGenerator.m */,
 				BE3AB18818FF814500D0AB3E /* AKUTestKit.h */,
+				BEAB86A1193961EB0098E80F /* AKUInfinityList.h */,
+				BEAB86A2193961EB0098E80F /* AKUInfinityList.m */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -244,7 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEFA240817FFDBD800453AA3 /* AKUNumberGenerator.m in Sources */,
+				BEAB86A3193961EB0098E80F /* AKUInfinityList.m in Sources */,
 				BEFA240517FFDBD800453AA3 /* AKUFixedDate.m in Sources */,
+				BEAB86A0193961BE0098E80F /* AKUInfinityListSpec.m in Sources */,
 				BEFA23EE17FFDBC000453AA3 /* Test.m in Sources */,
 				BEFA240A17FFDBD800453AA3 /* AKURegularString.m in Sources */,
 				BEFA240717FFDBD800453AA3 /* AKULoseDictionaryGenarator.m in Sources */,
