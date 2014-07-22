@@ -12,16 +12,16 @@ pod 'AKUTestKit', :git => "https://github.com/akuraru/AKUTestKit.git"
 
 See each generator's header.
 
-- [AKUDateGenerator.h](lib/AKUDateGenerator.h)
-- [AKUFixedDate.h](lib/AKUFixedDate.h)
-- [AKUInfinityList.h](lib/AKUInfinityList.h)
-- [AKUListFunctional.h](lib/AKUListFunctional.h)
-- [AKULoseDictionaryGenarator.h](lib/AKULoseDictionaryGenarator.h)
-- [AKUNumberGenerator.h](lib/AKUNumberGenerator.h)
-- [AKURandString.h](lib/AKURandString.h)
-- [AKURegularString.h](lib/AKURegularString.h)
-- [AKUStringGenerator.h](lib/AKUStringGenerator.h)
-- [AKUTestKit.h](lib/AKUTestKit.h)
+- [AKUDateGenerator.h](lib/generator/AKUDateGenerator.h)
+- [AKUFixedDate.h](lib/generator/AKUFixedDate.h)
+- [AKUInfinityList.h](lib/generator/AKUInfinityList.h)
+- [AKUListFunctional.h](lib/generator/AKUListFunctional.h)
+- [AKULoseDictionaryGenarator.h](lib/generator/AKULoseDictionaryGenarator.h)
+- [AKUNumberGenerator.h](lib/generator/AKUNumberGenerator.h)
+- [AKURandString.h](lib/generator/AKURandString.h)
+- [AKURegularString.h](lib/generator/AKURegularString.h)
+- [AKUStringGenerator.h](lib/generator/AKUStringGenerator.h)
+- [AKUTestKit.h](lib/generator/AKUTestKit.h)
 
 
 ## Contributing
