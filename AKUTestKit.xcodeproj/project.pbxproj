@@ -18,6 +18,7 @@
 		C87902618FD49F1EECEA22B2 /* AKURandString.m in Sources */ = {isa = PBXBuildFile; fileRef = C8790F53E83496949B6ADE47 /* AKURandString.m */; };
 		C87902D5FE49FC889D6739CD /* AKUListFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = C879029C172DD77AFA87489F /* AKUListFunctional.m */; };
 		C879037BAE7D2CD6FA638E43 /* AKULoseDictionaryGenarator.m in Sources */ = {isa = PBXBuildFile; fileRef = C8790B92384D711532E5B8FF /* AKULoseDictionaryGenarator.m */; };
+		C879050F1E0C56B5BE4C3A16 /* ChiSquaredTestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C87903339B252EA2AD4C3718 /* ChiSquaredTestSpec.m */; };
 		C879066FC51BC1B3313502CF /* AKURegularString.m in Sources */ = {isa = PBXBuildFile; fileRef = C8790E2A8763770A726B3D8D /* AKURegularString.m */; };
 		C879071CDDA18196E63E13CA /* AKUInfinityList.m in Sources */ = {isa = PBXBuildFile; fileRef = C8790BAF98005402840C2BD4 /* AKUInfinityList.m */; };
 		C8790784374368B7934986D9 /* NumberSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C879088E994F5D8C79DD50C7 /* NumberSpec.m */; };
@@ -25,6 +26,7 @@
 		C8790B2DBF2B6ECEE3D3AAA8 /* AKUDateGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C87909141A9CF67EFF9AB6FD /* AKUDateGenerator.m */; };
 		C8790CAFC0E0FD757104ACA2 /* AKUFixedDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8790BB0959CE66081A21A41 /* AKUFixedDate.m */; };
 		C8790E98E39162C41431E176 /* AKUNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C87905A3AD561CB73DEA528C /* AKUNumberGenerator.m */; };
+		C8790F2EA8D5E304D4AEB332 /* AKUChiSquaredTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C87902E0F875FF596A3E0CBF /* AKUChiSquaredTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +43,10 @@
 		BEFA23ED17FFDBC000453AA3 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		BEFA23EF17FFDBC000453AA3 /* Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
 		BEFA240C17FFDBE100453AA3 /* RegularStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularStringTest.m; sourceTree = "<group>"; };
+		C879009B1153FDF7085A7B7A /* AKUChiSquaredTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUChiSquaredTest.h; sourceTree = "<group>"; };
 		C879029C172DD77AFA87489F /* AKUListFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUListFunctional.m; sourceTree = "<group>"; };
+		C87902E0F875FF596A3E0CBF /* AKUChiSquaredTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUChiSquaredTest.m; sourceTree = "<group>"; };
+		C87903339B252EA2AD4C3718 /* ChiSquaredTestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChiSquaredTestSpec.m; sourceTree = "<group>"; };
 		C879055FB893A0D3979211B6 /* AKURandString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKURandString.h; sourceTree = "<group>"; };
 		C87905A3AD561CB73DEA528C /* AKUNumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUNumberGenerator.m; sourceTree = "<group>"; };
 		C87905D2C34632DAD1B5A58B /* AKUListFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUListFunctional.h; sourceTree = "<group>"; };
@@ -115,6 +120,7 @@
 				BEFA23E817FFDBC000453AA3 /* Supporting Files */,
 				C879088E994F5D8C79DD50C7 /* NumberSpec.m */,
 				BEAB869F193961BE0098E80F /* AKUInfinityListSpec.m */,
+				C87907DBDA2EBB35C0B526C0 /* check */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -134,8 +140,26 @@
 			children = (
 				BE3AB18818FF814500D0AB3E /* AKUTestKit.h */,
 				C8790DACB81DDA7225952A27 /* generator */,
+				C879024B78E19E6E28BE20DF /* check */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		C879024B78E19E6E28BE20DF /* check */ = {
+			isa = PBXGroup;
+			children = (
+				C87902E0F875FF596A3E0CBF /* AKUChiSquaredTest.m */,
+				C879009B1153FDF7085A7B7A /* AKUChiSquaredTest.h */,
+			);
+			path = check;
+			sourceTree = "<group>";
+		};
+		C87907DBDA2EBB35C0B526C0 /* check */ = {
+			isa = PBXGroup;
+			children = (
+				C87903339B252EA2AD4C3718 /* ChiSquaredTestSpec.m */,
+			);
+			path = check;
 			sourceTree = "<group>";
 		};
 		C8790DACB81DDA7225952A27 /* generator */ = {
@@ -272,6 +296,8 @@
 				C8790E98E39162C41431E176 /* AKUNumberGenerator.m in Sources */,
 				C8790B2DBF2B6ECEE3D3AAA8 /* AKUDateGenerator.m in Sources */,
 				C879097841D14101E93EDD6D /* AKUStringGenerator.m in Sources */,
+				C8790F2EA8D5E304D4AEB332 /* AKUChiSquaredTest.m in Sources */,
+				C879050F1E0C56B5BE4C3A16 /* ChiSquaredTestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

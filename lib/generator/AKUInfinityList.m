@@ -39,6 +39,6 @@
 }
 
 - (id)objectAtIndexedSubscript:(NSUInteger)idx {
-    return [self take:idx][idx];
+    return [self take:idx + 1][idx];
 }
 @end
