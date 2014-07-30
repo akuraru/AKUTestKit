@@ -1,17 +1,13 @@
 PODS:
   - AZDateBuilder (0.1)
-  - Kiwi/ARC (2.2.4)
-  - Kiwi/NonARC (2.2.4)
-  - Kiwi/XCTest (2.2.4):
-    - Kiwi/ARC
-    - Kiwi/NonARC
+  - Kiwi (2.3.0)
 
 DEPENDENCIES:
   - AZDateBuilder
-  - Kiwi/XCTest
+  - Kiwi
 
 SPEC CHECKSUMS:
-  AZDateBuilder: 423801fcc0c784eaf9c15b410d43895f6a24bdde
-  Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
+  AZDateBuilder: aa442a142b170612c2ef36ea2aa44199345748a5
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

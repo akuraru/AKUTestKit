@@ -5,7 +5,7 @@ platform :ios, '6.0'
 inhibit_all_warnings!
 
 target "Test" do
-  pod 'Kiwi/XCTest'
+  pod 'Kiwi'
   pod 'AZDateBuilder'
 end
 
