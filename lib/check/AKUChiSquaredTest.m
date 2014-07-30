@@ -3,7 +3,6 @@
 //
 
 #import "AKUChiSquaredTest.h"
-#import "KWValue.h"
 
 
 double p_nor(double z)  /* 正規分布の下側累積確率 */
