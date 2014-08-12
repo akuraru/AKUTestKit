@@ -15,7 +15,7 @@
 @implementation AKUInfinityList
 
 + (instancetype)listWithBlock:(id(^)(NSUInteger))block {
-    return [[self alloc] initWithBlock:block];
+    return [[self alloc] initWithBlock:[block copy]];
 }
 
 - (instancetype)initWithBlock:(id(^)(NSUInteger))block {

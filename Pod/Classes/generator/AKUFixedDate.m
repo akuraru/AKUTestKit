@@ -23,11 +23,7 @@
     return [formatter dateFromString:[self convertString]];
 }
 + (NSString *)convertString {
-    if (6.0 <= [[[UIDevice currentDevice] systemVersion] floatValue]) {
-        return [self string];
-    } else {
-        return [[self string] stringByReplacingCharactersInRange:(NSRange){.location = 19, .length = 0} withString:@"GMT"];
-    }
+    return [self string];
 }
 
 + (NSString *)string {

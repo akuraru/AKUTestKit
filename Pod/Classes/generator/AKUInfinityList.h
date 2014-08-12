@@ -12,6 +12,4 @@
 + (instancetype)listWithBlock:(id(^)(NSUInteger))block;
 
 - (NSArray *)take:(NSUInteger)count;
-
-- (id)objectAtIndexedSubscript:(NSUInteger)idx; __attribute__((deprecated("This method is not good performance")));
 @end

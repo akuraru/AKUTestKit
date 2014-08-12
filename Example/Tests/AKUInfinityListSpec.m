@@ -18,11 +18,5 @@ SPEC_BEGIN(InfinityListSpec)
                 specify(^{[[expected should] equal:@[@0, @1, @2, @3, @4]];});
             });
         });
-        describe(@"-objectAtIndexedSubscript:", ^{
-            context(@"0", ^{
-                let(expected, ^{return list[0];});
-                specify(^{[[expected should] equal:@0];});
-            });
-        });
     });
 SPEC_END

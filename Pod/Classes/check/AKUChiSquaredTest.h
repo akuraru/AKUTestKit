@@ -7,5 +7,5 @@
 
 @interface AKUChiSquaredTest : NSObject
 // NSArray[@(NSInteger)] and NSArray[@(CGFloat)], CGFloat
-+ (BOOL)observedCounts:(NSArray *)counts willFit:(NSArray *)expectedProbabilities at:(CGFloat)significanceLevel;
++ (BOOL)observedCounts:(NSArray *)counts willFit:(NSArray *)expectedProbabilities at:(double)significanceLevel;
 @end

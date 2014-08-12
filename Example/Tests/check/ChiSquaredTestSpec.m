@@ -6,7 +6,7 @@
 #import "AKUChiSquaredTest.h"
 
 @interface AKUChiSquaredTest ()
-+ (CGFloat)chiSquare:(NSArray *)array probaby:(NSArray *)probaby;
++ (double)chiSquare:(NSArray *)array probaby:(NSArray *)probaby;
 + (double)q_chi2:(NSInteger)df chi2:(double)chi2;
 @end
 
@@ -25,19 +25,19 @@ SPEC_BEGIN(ChiSquaredTestSpec)
         });
         describe(@"chiSquare:probaby:", ^{
             it(@"50, 50 is 0", ^{
-                CGFloat o = [AKUChiSquaredTest chiSquare:@[@50, @50] probaby:@[@0.5, @0.5]];
+                double o = [AKUChiSquaredTest chiSquare:@[@50, @50] probaby:@[@0.5, @0.5]];
                 [[theValue(o) should] equal:0 withDelta:0.01];
             });
             it(@"62, 38 is under 6.635", ^{
-                CGFloat o = [AKUChiSquaredTest chiSquare:@[@62, @38] probaby:@[@0.5, @0.5]];
+                double o = [AKUChiSquaredTest chiSquare:@[@62, @38] probaby:@[@0.5, @0.5]];
                 [[theValue(o) should] beLessThan:theValue(6.635)];
             });
             it(@"62, 38 is over 6.635", ^{
-                CGFloat o = [AKUChiSquaredTest chiSquare:@[@63, @37] probaby:@[@0.5, @0.5]];
+                double o = [AKUChiSquaredTest chiSquare:@[@63, @37] probaby:@[@0.5, @0.5]];
                 [[theValue(o) should] beGreaterThan:theValue(6.635)];
             });
             it(@"blood type rate is 2.41", ^{
-                CGFloat o = [AKUChiSquaredTest chiSquare:@[@37, @25, @12, @26] probaby:@[@0.4, @0.2, @0.1, @0.3]];
+                double o = [AKUChiSquaredTest chiSquare:@[@37, @25, @12, @26] probaby:@[@0.4, @0.2, @0.1, @0.3]];
                 [[theValue(o) should] equal:2.41 withDelta:0.01];
             });
         });
