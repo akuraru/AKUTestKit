@@ -1,5 +1,6 @@
-#import "Kiwi.h"
 #import "AKUNumberGenerator.h"
+#import "AKUChiSquaredTest.h"
+
 
 SPEC_BEGIN(NumberSpec)
     describe(@"NumberrGenerator", ^{
@@ -14,21 +15,25 @@ SPEC_BEGIN(NumberSpec)
                 context(@"to 1", ^{
                     let(to, ^{return @1;});
                     it(@"is 0 or 1", ^{[[@[@0, @1] should] contain:expected];});
+                    it(@"check all contein", ^{
+                        NSArray *values = [self countValue:@[@0, @1] block:^id{
+                            return @([AKUNumberGenerator between:[from integerValue] end:[to integerValue]]);
+                        } count:100];
+                        BOOL expr = [AKUChiSquaredTest observedCounts:values willFit:@[@0.5, @0.5] at:0.01];
+                        [[theValue(expr) should] equal:theValue(YES)];
+                    });
                 });
                 context(@"to 2", ^{
                     let(to, ^{return @2;});
                     context(@"is 0,1 or 2", ^{
                         specify(^{[[@[@0, @1, @2] should] contain:expected];});
                     });
-                    context(@"come up 0,1 and 2", ^{
-                        let(expected, ^{
-                            NSMutableSet *set = [NSMutableSet set];
-                            for (int i = 0; i < 100; i++) {
-                                [set addObject:@([AKUNumberGenerator between:[from integerValue] end:[to integerValue]])];
-                            }
-                            return [[set allObjects] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {return [obj1 compare:obj2];}];
-                        });
-                        specify(^{[[@[@0, @1, @2] should] equal:expected];});
+                    it(@"check all contein", ^{
+                        NSArray *values = [self countValue:@[@0, @1, @2] block:^id{
+                            return @([AKUNumberGenerator between:[from integerValue] end:[to integerValue]]);
+                        } count:100];
+                        BOOL expr = [AKUChiSquaredTest observedCounts:values willFit:@[@0.333, @0.333, @0.334] at:0.01];
+                        [[theValue(expr) should] equal:theValue(YES)];
                     });
                 });
             });
@@ -38,15 +43,12 @@ SPEC_BEGIN(NumberSpec)
                 context(@"is 10, 11, 12 or 13", ^{
                     specify(^{[[@[@10, @11, @12, @13] should] contain:expected];});
                 });
-                context(@"come up 10, 11, 12 and 13", ^{
-                    let(expected, ^{
-                        NSMutableSet *set = [NSMutableSet set];
-                        for (int i = 0; i < 100; i++) {
-                            [set addObject:@([AKUNumberGenerator between:[from integerValue] end:[to integerValue]])];
-                        }
-                        return [[set allObjects] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {return [obj1 compare:obj2];}];
-                    });
-                    specify(^{[[@[@10, @11, @12, @13] should] equal:expected];});
+                it(@"check all contein", ^{
+                    NSArray *values = [self countValue:@[@10, @11, @12, @13] block:^id{
+                        return @([AKUNumberGenerator between:[from integerValue] end:[to integerValue]]);
+                    } count:100];
+                    BOOL expr = [AKUChiSquaredTest observedCounts:values willFit:@[@0.25, @0.25, @0.25, @0.25] at:0.01];
+                    [[theValue(expr) should] equal:theValue(YES)];
                 });
             });
             context(@"from -1", ^{
@@ -56,15 +58,12 @@ SPEC_BEGIN(NumberSpec)
                     context(@"is -1 or 0", ^{
                         specify(^{[[@[@-1, @0] should] contain:expected];});
                     });
-                    context(@"come up -1 and 0", ^{
-                        let(expected, ^{
-                            NSMutableSet *set = [NSMutableSet set];
-                            for (int i = 0; i < 100; i++) {
-                                [set addObject:@([AKUNumberGenerator between:[from integerValue] end:[to integerValue]])];
-                            }
-                            return [[set allObjects] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {return [obj1 compare:obj2];}];
-                        });
-                        specify(^{[[@[@-1, @0] should] equal:expected];});
+                    it(@"check all contein", ^{
+                        NSArray *values = [self countValue:@[@-1, @0] block:^id{
+                            return @([AKUNumberGenerator between:[from integerValue] end:[to integerValue]]);
+                        } count:100];
+                        BOOL expr = [AKUChiSquaredTest observedCounts:values willFit:@[@0.5, @0.5] at:0.01];
+                        [[theValue(expr) should] equal:theValue(YES)];
                     });
                 });
             });
@@ -74,15 +73,12 @@ SPEC_BEGIN(NumberSpec)
                 let(expected, ^{return [AKUNumberGenerator boolean];});
                 specify(^{[[@[@YES, @NO] should] contain:expected];});
             });
-            context(@"come up YES and NO", ^{
-                let(expected, ^{
-                    NSMutableSet *set = [NSMutableSet set];
-                    for (int i = 0; i < 100; i++) {
-                        [set addObject:[AKUNumberGenerator boolean]];
-                    }
-                    return [[set allObjects] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {return [obj1 compare:obj2];}];
-                });
-                specify(^{[[@[@NO, @YES] should] equal:expected];});
+            it(@"check all contein", ^{
+                NSArray *values = [self countValue:@[@NO, @YES] block:^id{
+                    return [AKUNumberGenerator boolean];
+                } count:100];
+                BOOL expr = [AKUChiSquaredTest observedCounts:values willFit:@[@0.5, @0.5] at:0.01];
+                [[theValue(expr) should] equal:theValue(YES)];
             });
         });
         describe(@"-double", ^{
@@ -119,4 +115,16 @@ SPEC_BEGIN(NumberSpec)
             });
         });
     });
+}
+
++ (NSArray *)countValue:(NSArray *)keys block:(id(^)())block count:(NSInteger)count {
+    NSMutableDictionary *d = [NSMutableDictionary dictionary];
+    [keys enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        d[obj] = @0;
+    }];
+    for (int i = 0; i < 100; ++i) {
+        id k = block();
+        d[k] = @([d[k] integerValue] + 1);
+    }
+    return d.allValues;
 SPEC_END

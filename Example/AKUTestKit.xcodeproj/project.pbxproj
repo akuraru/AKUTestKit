@@ -26,7 +26,7 @@
 		BE059C1E1999A89000AD97FD /* AKUStringGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C121999A89000AD97FD /* AKUStringGenerator.m */; };
 		C87908660342B946E000E169 /* RegularStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C87908D7618F2D2423F5C51B /* RegularStringTest.m */; };
 		C8790B225EAAB9B89DF8D31B /* ChiSquaredTestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C879079428412D10CE9297F4 /* ChiSquaredTestSpec.m */; };
-		C8790D17AE911A5BBF2C59E6 /* NumberSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C879073A3924EF2889C894EF /* NumberSpec.m */; };
+		C8790BC884D88721DD128818 /* NumberSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C87907424A5D4986BDA4837F /* NumberSpec.m */; };
 		C8790E1FDD4D87CB4C994D55 /* AKUInfinityListSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C8790E221520126CA07400E1 /* AKUInfinityListSpec.m */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +66,7 @@
 		BE059C101999A89000AD97FD /* AKURegularString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKURegularString.m; sourceTree = "<group>"; };
 		BE059C111999A89000AD97FD /* AKUStringGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUStringGenerator.h; sourceTree = "<group>"; };
 		BE059C121999A89000AD97FD /* AKUStringGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUStringGenerator.m; sourceTree = "<group>"; };
-		C879073A3924EF2889C894EF /* NumberSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberSpec.m; sourceTree = "<group>"; };
+		C87907424A5D4986BDA4837F /* NumberSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberSpec.m; sourceTree = "<group>"; };
 		C879079428412D10CE9297F4 /* ChiSquaredTestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChiSquaredTestSpec.m; sourceTree = "<group>"; };
 		C87908D7618F2D2423F5C51B /* RegularStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularStringTest.m; sourceTree = "<group>"; };
 		C8790CFECD5FEB66F085E8FE /* RegularStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularStringTest.h; sourceTree = "<group>"; };
@@ -127,11 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				6003F5B6195388D20070C39A /* Supporting Files */,
-				C879073A3924EF2889C894EF /* NumberSpec.m */,
 				C879035B87183C0E986A894A /* check */,
 				C87908D7618F2D2423F5C51B /* RegularStringTest.m */,
 				C8790E221520126CA07400E1 /* AKUInfinityListSpec.m */,
 				C8790CFECD5FEB66F085E8FE /* RegularStringTest.h */,
+				C8790A105F86B11C41616098 /* generator */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -225,6 +225,14 @@
 				C879079428412D10CE9297F4 /* ChiSquaredTestSpec.m */,
 			);
 			path = check;
+			sourceTree = "<group>";
+		};
+		C8790A105F86B11C41616098 /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				C87907424A5D4986BDA4837F /* NumberSpec.m */,
+			);
+			path = generator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,10 +351,10 @@
 				BE059C1A1999A89000AD97FD /* AKULoseDictionaryGenarator.m in Sources */,
 				BE059C161999A89000AD97FD /* AKUDateGenerator.m in Sources */,
 				BE059C181999A89000AD97FD /* AKUInfinityList.m in Sources */,
-				C8790D17AE911A5BBF2C59E6 /* NumberSpec.m in Sources */,
 				C8790B225EAAB9B89DF8D31B /* ChiSquaredTestSpec.m in Sources */,
 				C87908660342B946E000E169 /* RegularStringTest.m in Sources */,
 				C8790E1FDD4D87CB4C994D55 /* AKUInfinityListSpec.m in Sources */,
+				C8790BC884D88721DD128818 /* NumberSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
