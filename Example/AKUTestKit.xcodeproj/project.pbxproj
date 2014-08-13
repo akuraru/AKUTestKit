@@ -12,18 +12,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		BD3E39E3A36E4871A4CF9A70 /* libPods-AKUTestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D0655409E5418CA8676FF8 /* libPods-AKUTestKit.a */; };
-		BE059C131999A89000AD97FD /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = BE059BF91999A89000AD97FD /* .gitkeep */; };
-		BE059C141999A89000AD97FD /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = BE059BFB1999A89000AD97FD /* .gitkeep */; };
-		BE059C151999A89000AD97FD /* AKUChiSquaredTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059BFF1999A89000AD97FD /* AKUChiSquaredTest.m */; };
-		BE059C161999A89000AD97FD /* AKUDateGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C021999A89000AD97FD /* AKUDateGenerator.m */; };
-		BE059C171999A89000AD97FD /* AKUFixedDate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C041999A89000AD97FD /* AKUFixedDate.m */; };
-		BE059C181999A89000AD97FD /* AKUInfinityList.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C061999A89000AD97FD /* AKUInfinityList.m */; };
-		BE059C191999A89000AD97FD /* AKUListFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C081999A89000AD97FD /* AKUListFunctional.m */; };
-		BE059C1A1999A89000AD97FD /* AKULoseDictionaryGenarator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C0A1999A89000AD97FD /* AKULoseDictionaryGenarator.m */; };
-		BE059C1B1999A89000AD97FD /* AKUNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C0C1999A89000AD97FD /* AKUNumberGenerator.m */; };
-		BE059C1C1999A89000AD97FD /* AKURandString.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C0E1999A89000AD97FD /* AKURandString.m */; };
-		BE059C1D1999A89000AD97FD /* AKURegularString.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C101999A89000AD97FD /* AKURegularString.m */; };
-		BE059C1E1999A89000AD97FD /* AKUStringGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE059C121999A89000AD97FD /* AKUStringGenerator.m */; };
 		C87908660342B946E000E169 /* RegularStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C87908D7618F2D2423F5C51B /* RegularStringTest.m */; };
 		C8790B225EAAB9B89DF8D31B /* ChiSquaredTestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C879079428412D10CE9297F4 /* ChiSquaredTestSpec.m */; };
 		C8790BC884D88721DD128818 /* NumberSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C87907424A5D4986BDA4837F /* NumberSpec.m */; };
@@ -36,36 +24,13 @@
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = AKUTestKit.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* AKUTestKit.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AKUTestKit.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		92D0655409E5418CA8676FF8 /* libPods-AKUTestKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AKUTestKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9598195F1C8B4A36A87B92D7 /* Pods-AKUTestKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKUTestKit.xcconfig"; path = "Pods/Pods-AKUTestKit.xcconfig"; sourceTree = "<group>"; };
-		BE059BF91999A89000AD97FD /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		BE059BFB1999A89000AD97FD /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		BE059BFC1999A89000AD97FD /* AKUTestKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUTestKit.h; sourceTree = "<group>"; };
-		BE059BFE1999A89000AD97FD /* AKUChiSquaredTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUChiSquaredTest.h; sourceTree = "<group>"; };
-		BE059BFF1999A89000AD97FD /* AKUChiSquaredTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUChiSquaredTest.m; sourceTree = "<group>"; };
-		BE059C011999A89000AD97FD /* AKUDateGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUDateGenerator.h; sourceTree = "<group>"; };
-		BE059C021999A89000AD97FD /* AKUDateGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUDateGenerator.m; sourceTree = "<group>"; };
-		BE059C031999A89000AD97FD /* AKUFixedDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUFixedDate.h; sourceTree = "<group>"; };
-		BE059C041999A89000AD97FD /* AKUFixedDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUFixedDate.m; sourceTree = "<group>"; };
-		BE059C051999A89000AD97FD /* AKUInfinityList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUInfinityList.h; sourceTree = "<group>"; };
-		BE059C061999A89000AD97FD /* AKUInfinityList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUInfinityList.m; sourceTree = "<group>"; };
-		BE059C071999A89000AD97FD /* AKUListFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUListFunctional.h; sourceTree = "<group>"; };
-		BE059C081999A89000AD97FD /* AKUListFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUListFunctional.m; sourceTree = "<group>"; };
-		BE059C091999A89000AD97FD /* AKULoseDictionaryGenarator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKULoseDictionaryGenarator.h; sourceTree = "<group>"; };
-		BE059C0A1999A89000AD97FD /* AKULoseDictionaryGenarator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKULoseDictionaryGenarator.m; sourceTree = "<group>"; };
-		BE059C0B1999A89000AD97FD /* AKUNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUNumberGenerator.h; sourceTree = "<group>"; };
-		BE059C0C1999A89000AD97FD /* AKUNumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUNumberGenerator.m; sourceTree = "<group>"; };
-		BE059C0D1999A89000AD97FD /* AKURandString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKURandString.h; sourceTree = "<group>"; };
-		BE059C0E1999A89000AD97FD /* AKURandString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKURandString.m; sourceTree = "<group>"; };
-		BE059C0F1999A89000AD97FD /* AKURegularString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKURegularString.h; sourceTree = "<group>"; };
-		BE059C101999A89000AD97FD /* AKURegularString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKURegularString.m; sourceTree = "<group>"; };
-		BE059C111999A89000AD97FD /* AKUStringGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKUStringGenerator.h; sourceTree = "<group>"; };
-		BE059C121999A89000AD97FD /* AKUStringGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUStringGenerator.m; sourceTree = "<group>"; };
 		C87907424A5D4986BDA4837F /* NumberSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberSpec.m; sourceTree = "<group>"; };
 		C879079428412D10CE9297F4 /* ChiSquaredTestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChiSquaredTestSpec.m; sourceTree = "<group>"; };
 		C87908D7618F2D2423F5C51B /* RegularStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularStringTest.m; sourceTree = "<group>"; };
@@ -93,7 +58,6 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				BE059BF71999A89000AD97FD /* Pod */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
@@ -106,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F58A195388D20070C39A /* AKUTestKit.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F5AE195388D20070C39A /* AKUTestKit.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,69 +120,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		BE059BF71999A89000AD97FD /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				BE059BF81999A89000AD97FD /* Assets */,
-				BE059BFA1999A89000AD97FD /* Classes */,
-			);
-			name = Pod;
-			path = ../Pod;
-			sourceTree = "<group>";
-		};
-		BE059BF81999A89000AD97FD /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				BE059BF91999A89000AD97FD /* .gitkeep */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		BE059BFA1999A89000AD97FD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				BE059BFB1999A89000AD97FD /* .gitkeep */,
-				BE059BFC1999A89000AD97FD /* AKUTestKit.h */,
-				BE059BFD1999A89000AD97FD /* check */,
-				BE059C001999A89000AD97FD /* generator */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		BE059BFD1999A89000AD97FD /* check */ = {
-			isa = PBXGroup;
-			children = (
-				BE059BFE1999A89000AD97FD /* AKUChiSquaredTest.h */,
-				BE059BFF1999A89000AD97FD /* AKUChiSquaredTest.m */,
-			);
-			path = check;
-			sourceTree = "<group>";
-		};
-		BE059C001999A89000AD97FD /* generator */ = {
-			isa = PBXGroup;
-			children = (
-				BE059C011999A89000AD97FD /* AKUDateGenerator.h */,
-				BE059C021999A89000AD97FD /* AKUDateGenerator.m */,
-				BE059C031999A89000AD97FD /* AKUFixedDate.h */,
-				BE059C041999A89000AD97FD /* AKUFixedDate.m */,
-				BE059C051999A89000AD97FD /* AKUInfinityList.h */,
-				BE059C061999A89000AD97FD /* AKUInfinityList.m */,
-				BE059C071999A89000AD97FD /* AKUListFunctional.h */,
-				BE059C081999A89000AD97FD /* AKUListFunctional.m */,
-				BE059C091999A89000AD97FD /* AKULoseDictionaryGenarator.h */,
-				BE059C0A1999A89000AD97FD /* AKULoseDictionaryGenarator.m */,
-				BE059C0B1999A89000AD97FD /* AKUNumberGenerator.h */,
-				BE059C0C1999A89000AD97FD /* AKUNumberGenerator.m */,
-				BE059C0D1999A89000AD97FD /* AKURandString.h */,
-				BE059C0E1999A89000AD97FD /* AKURandString.m */,
-				BE059C0F1999A89000AD97FD /* AKURegularString.h */,
-				BE059C101999A89000AD97FD /* AKURegularString.m */,
-				BE059C111999A89000AD97FD /* AKUStringGenerator.h */,
-				BE059C121999A89000AD97FD /* AKUStringGenerator.m */,
-			);
-			path = generator;
-			sourceTree = "<group>";
-		};
 		C879035B87183C0E986A894A /* check */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,7 +155,7 @@
 			);
 			name = AKUTestKit;
 			productName = AKUTestKitTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* AKUTestKit.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -295,9 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE059C141999A89000AD97FD /* .gitkeep in Resources */,
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
-				BE059C131999A89000AD97FD /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,16 +240,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE059C1B1999A89000AD97FD /* AKUNumberGenerator.m in Sources */,
-				BE059C171999A89000AD97FD /* AKUFixedDate.m in Sources */,
-				BE059C151999A89000AD97FD /* AKUChiSquaredTest.m in Sources */,
-				BE059C191999A89000AD97FD /* AKUListFunctional.m in Sources */,
-				BE059C1E1999A89000AD97FD /* AKUStringGenerator.m in Sources */,
-				BE059C1C1999A89000AD97FD /* AKURandString.m in Sources */,
-				BE059C1D1999A89000AD97FD /* AKURegularString.m in Sources */,
-				BE059C1A1999A89000AD97FD /* AKULoseDictionaryGenarator.m in Sources */,
-				BE059C161999A89000AD97FD /* AKUDateGenerator.m in Sources */,
-				BE059C181999A89000AD97FD /* AKUInfinityList.m in Sources */,
 				C8790B225EAAB9B89DF8D31B /* ChiSquaredTestSpec.m in Sources */,
 				C87908660342B946E000E169 /* RegularStringTest.m in Sources */,
 				C8790E1FDD4D87CB4C994D55 /* AKUInfinityListSpec.m in Sources */,

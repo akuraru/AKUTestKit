@@ -1,5 +1,5 @@
 PODS:
-  - AKUTestKit (0.1.0)
+  - AKUTestKit (1.0.0)
   - Kiwi (2.3.0)
 
 DEPENDENCIES:
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  AKUTestKit: dd93275598449379a773edcafbd2b157adba7605
+  AKUTestKit: 247a2f8c8b31a62145aa10ab790469ce8f61afcc
   Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
 
 COCOAPODS: 0.33.1
