@@ -4,28 +4,6 @@
 
 #import "AKUChiSquaredTest.h"
 
-
-double p_nor(double z)  /* 正規分布の下側累積確率 */
-{
-    int i;
-    double z2, prev, p, t;
-
-    z2 = z * z;
-    t = p = z * exp(-0.5 * z2) / sqrt(2 * M_PI);
-    for (i = 3; i < 200; i += 2) {
-        prev = p;
-        t *= z2 / i;
-        p += t;
-        if (p == prev) return 0.5 + p;
-    }
-    return (z > 0);
-}
-
-double q_nor(double z)  /* 正規分布の上側累積確率 */
-{
-    return 1 - p_nor(z);
-}
-
 @implementation AKUChiSquaredTest {
 
 }
@@ -34,11 +12,8 @@ double q_nor(double z)  /* 正規分布の上側累積確率 */
     if ((degreesOfFreedom + 1) != expectedProbabilities.count) {
         @throw([NSError errorWithDomain:[NSString stringWithFormat:@"Is not same count %d ans %d", degreesOfFreedom + 1, expectedProbabilities.count] code:0 userInfo:nil]);
     }
-
     double chiSquare = [self chiSquare:counts probaby:expectedProbabilities];
-
     double upperLimitOfChiSquareValue = [self q_chi2:degreesOfFreedom chi2:chiSquare];
-
     return significanceLevel <= upperLimitOfChiSquareValue;
 }
 
@@ -63,18 +38,18 @@ double q_nor(double z)  /* 正規分布の上側累積確率 */
 
 
 + (double)q_chi2:(NSInteger)df chi2:(double)chi2 {
-    int k;
+    NSInteger k;
     double s, t, chi;
 
     if (df & 1) {  /* 自由度が奇数 */
         chi = sqrt(chi2);
-        if (df == 1) return 2 * q_nor(chi);
+        if (df == 1) return 2 * [self q_nor:chi];
         s = t = chi * exp(-0.5 * chi2) / sqrt(2 * M_PI);
         for (k = 3; k < df; k += 2) {
             t *= chi2 / k;
             s += t;
         }
-        return 2 * (q_nor(chi) + s);
+        return 2 * ([self q_nor:chi] + s);
     } else {      /* 自由度が偶数 */
         s = t = exp(-0.5 * chi2);
         for (k = 2; k < df; k += 2) {
@@ -83,6 +58,25 @@ double q_nor(double z)  /* 正規分布の上側累積確率 */
         }
         return s;
     }
+}
+
++ (double)p_nor:(double)z {
+    NSInteger i;
+    double z2, prev, p, t;
+
+    z2 = z * z;
+    t = p = z * exp(-0.5 * z2) / sqrt(2 * M_PI);
+    for (i = 3; i < 200; i += 2) {
+        prev = p;
+        t *= z2 / i;
+        p += t;
+        if (p == prev) return 0.5 + p;
+    }
+    return (z > 0);
+}
+
++ (double)q_nor:(double)z {
+    return 1 - [self p_nor:z];
 }
 
 @end

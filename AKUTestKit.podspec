@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "AKUTestKit"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "A library for generating random NSString, NSDate, NSNumber, etc."
   s.description      = <<-DESC
                        See each generator's header.
@@ -36,7 +36,7 @@ AKUChiSquaredTest.h
   s.platform     = :ios, '6.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
+  s.source_files = 'Pod/Classes/', 'Pod/Classes/check', 'Pod/Classes/generator' 
   # s.resources = 'Pod/Assets/*.png'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
