@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "AKUTestKit"
-  s.version          = "1.0.1"
+  s.version          = "1.1.0"
   s.summary          = "A library for generating random NSString, NSDate, NSNumber, etc."
   s.description      = <<-DESC
                        See each generator's header.
