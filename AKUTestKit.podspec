@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "AKUTestKit"
-  s.version          = "1.1.0"
+  s.version          = "1.1.1"
   s.summary          = "A library for generating random NSString, NSDate, NSNumber, etc."
   s.description      = <<-DESC
                        See each generator's header.
@@ -27,21 +27,18 @@ AKUStringGenerator.h
 AKUChiSquaredTest.h
                        DESC
   s.homepage         = "https://github.com/akuraru/AKUTestKit"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "akuraru" => "akuraru@gmail.com" }
-  s.source           = { :git => "https://github.com/akuraru/AKUTestKit.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/akuraru'
+  s.source           = {
+    :git => "https://github.com/akuraru/AKUTestKit.git",
+    :tag => s.version.to_s,
+  }
+  s.social_media_url = 'https://twitter.com/akuraru'
 
-  s.platform     = :ios, '6.0'
+  s.platform     = :ios, '7.0'
   s.requires_arc = true
-  s.default_subspecs = 'all'
+  s.default_subspecs = 'RandomGenerator', 'Check'
 
-  s.subspec 'all' do |ss|
-    ss.dependency 'AKUTestKit/RandomGenerator'
-    ss.dependency 'AKUTestKit/Check'
-    ss.source_files = 'Pod/Classes/'
-  end
   s.subspec 'RandomGenerator' do |ss|
     ss.source_files = 'Pod/Classes/generator' 
   end
