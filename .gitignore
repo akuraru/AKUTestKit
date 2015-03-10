@@ -1,29 +1,43 @@
-# OS X
+#xcode specific
+build/*
 .DS_Store
-
-# Xcode
-build/
 *.pbxuser
 !default.pbxuser
-*.mode1v3
-!default.mode1v3
 *.mode2v3
 !default.mode2v3
+*.mode1v3
+!default.mode1v3
+*.perspective
 *.perspectivev3
+*~.nib
+#ignore private workspace stuff added by Xcode4
 !default.perspectivev3
+!default.xcworkspace
 xcuserdata
-*.xccheckout
+*.xcworkspace
 profile
 *.moved-aside
 DerivedData
+.idea/
 *.hmap
-*.ipa
 
-# Bundler
-.bundle
+# gemignore Global/OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
 
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
-#
-# Pods/
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+Pods
+
+# Generate Code
+Generated
+_*.h
+_*.m
+_*.swift

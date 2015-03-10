@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		226946832FD447F6A0BFF1F8 /* Pods-AKUTestKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKUTestKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AKUTestKit/Pods-AKUTestKit.debug.xcconfig"; sourceTree = "<group>"; };
 		5EF2CE078CD447DC8958EAB2 /* AKUTestKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AKUTestKit.podspec; path = ../AKUTestKit.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* AKUTestKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKUTestKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -30,11 +31,10 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		92D0655409E5418CA8676FF8 /* libPods-AKUTestKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AKUTestKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9598195F1C8B4A36A87B92D7 /* Pods-AKUTestKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKUTestKit.xcconfig"; path = "Pods/Pods-AKUTestKit.xcconfig"; sourceTree = "<group>"; };
+		9583E6FD1E2FC755133E28D3 /* Pods-AKUTestKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKUTestKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-AKUTestKit/Pods-AKUTestKit.release.xcconfig"; sourceTree = "<group>"; };
 		C87907424A5D4986BDA4837F /* NumberSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberSpec.m; sourceTree = "<group>"; };
 		C879079428412D10CE9297F4 /* ChiSquaredTestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChiSquaredTestSpec.m; sourceTree = "<group>"; };
 		C87908D7618F2D2423F5C51B /* RegularStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularStringTest.m; sourceTree = "<group>"; };
-		C8790CFECD5FEB66F085E8FE /* RegularStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularStringTest.h; sourceTree = "<group>"; };
 		C8790E221520126CA07400E1 /* AKUInfinityListSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKUInfinityListSpec.m; sourceTree = "<group>"; };
 		C929EDB1B71140238AF90EE8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EE4F45E9C55C4C00916556B5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				9598195F1C8B4A36A87B92D7 /* Pods-AKUTestKit.xcconfig */,
+				F6B04C1BBBE4B99430259B38 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,7 +94,6 @@
 				C879035B87183C0E986A894A /* check */,
 				C87908D7618F2D2423F5C51B /* RegularStringTest.m */,
 				C8790E221520126CA07400E1 /* AKUInfinityListSpec.m */,
-				C8790CFECD5FEB66F085E8FE /* RegularStringTest.h */,
 				C8790A105F86B11C41616098 /* generator */,
 			);
 			path = Tests;
@@ -136,6 +135,15 @@
 			path = generator;
 			sourceTree = "<group>";
 		};
+		F6B04C1BBBE4B99430259B38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				226946832FD447F6A0BFF1F8 /* Pods-AKUTestKit.debug.xcconfig */,
+				9583E6FD1E2FC755133E28D3 /* Pods-AKUTestKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,11 +175,6 @@
 				CLASSPREFIX = AKU;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = akuraru;
-				TargetAttributes = {
-					6003F5AD195388D20070C39A = {
-						TestTargetID = 6003F589195388D20070C39A;
-					};
-				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "AKUTestKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -230,7 +233,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-AKUTestKit-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AKUTestKit/Pods-AKUTestKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -335,7 +338,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9598195F1C8B4A36A87B92D7 /* Pods-AKUTestKit.xcconfig */;
+			baseConfigurationReference = 226946832FD447F6A0BFF1F8 /* Pods-AKUTestKit.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -350,14 +353,13 @@
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9598195F1C8B4A36A87B92D7 /* Pods-AKUTestKit.xcconfig */;
+			baseConfigurationReference = 9583E6FD1E2FC755133E28D3 /* Pods-AKUTestKit.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -368,7 +370,6 @@
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

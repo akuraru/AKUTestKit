@@ -34,7 +34,7 @@
     return [self stringFromIndex:[self randomIndex]];
 }
 - (NSInteger)randomIndex {
-    return (arc4random_uniform(length));
+    return (arc4random_uniform((u_int32_t)length));
 }
 
 - (NSString *)stringFromIndex:(NSInteger)index {
@@ -55,7 +55,7 @@
 @end
 @implementation SetString
 - (NSString *)nextString {
-    return [self stringFromIndex:arc4random_uniform(length)];
+    return [self stringFromIndex:arc4random_uniform((u_int32_t)length)];
 }
 - (NSString *)stringFromIndex:(NSInteger)index {
     for (AKURandString *rs in words) {

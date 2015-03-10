@@ -1,13 +1,23 @@
 PODS:
-  - AZDateBuilder (0.1)
-  - Kiwi (2.3.0)
+  - AKUTestKit (1.0.1):
+    - AKUTestKit/all (= 1.0.1)
+  - AKUTestKit/all (1.0.1):
+    - AKUTestKit/Check
+    - AKUTestKit/RandomGenerator
+  - AKUTestKit/Check (1.0.1)
+  - AKUTestKit/RandomGenerator (1.0.1)
+  - Kiwi (2.3.1)
 
 DEPENDENCIES:
-  - AZDateBuilder
+  - AKUTestKit (from `./`)
   - Kiwi
 
-SPEC CHECKSUMS:
-  AZDateBuilder: aa442a142b170612c2ef36ea2aa44199345748a5
-  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+EXTERNAL SOURCES:
+  AKUTestKit:
+    :path: ./
 
-COCOAPODS: 0.33.1
+SPEC CHECKSUMS:
+  AKUTestKit: 02a7be69f214d104f1de107d21443784bb031115
+  Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7
+
+COCOAPODS: 0.36.0.rc.1

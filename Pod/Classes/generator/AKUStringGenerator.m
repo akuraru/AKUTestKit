@@ -12,7 +12,7 @@
 @implementation AKUStringGenerator
 
 + (NSInteger)randBetween:(NSRange)range {
-    return arc4random_uniform(range.length) + range.location;
+    return arc4random_uniform((u_int32_t)range.length) + range.location;
 }
 
 + (NSString *)alphabetWithRange:(NSRange)range {

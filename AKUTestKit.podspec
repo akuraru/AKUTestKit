@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "AKUTestKit"
-  s.version          = "1.0.1"
+  s.version          = "1.1.0"
   s.summary          = "A library for generating random NSString, NSDate, NSNumber, etc."
   s.description      = <<-DESC
                        See each generator's header.
@@ -35,11 +35,17 @@ AKUChiSquaredTest.h
 
   s.platform     = :ios, '6.0'
   s.requires_arc = true
+  s.default_subspecs = 'all'
 
-  s.source_files = 'Pod/Classes/', 'Pod/Classes/check', 'Pod/Classes/generator' 
-  # s.resources = 'Pod/Assets/*.png'
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'all' do |ss|
+    ss.dependency 'AKUTestKit/RandomGenerator'
+    ss.dependency 'AKUTestKit/Check'
+    ss.source_files = 'Pod/Classes/'
+  end
+  s.subspec 'RandomGenerator' do |ss|
+    ss.source_files = 'Pod/Classes/generator' 
+  end
+  s.subspec 'Check' do |ss|
+    ss.source_files = 'Pod/Classes/check'
+  end
 end
