@@ -10,7 +10,7 @@
 + (BOOL)observedCounts:(NSArray *)counts willFit:(NSArray *)expectedProbabilities at:(double)significanceLevel {
     NSUInteger degreesOfFreedom = counts.count - 1;
     if ((degreesOfFreedom + 1) != expectedProbabilities.count) {
-        @throw([NSError errorWithDomain:[NSString stringWithFormat:@"Is not same count %d ans %d", degreesOfFreedom + 1, expectedProbabilities.count] code:0 userInfo:nil]);
+        @throw([NSError errorWithDomain:[NSString stringWithFormat:@"Is not same count %zd ans %zd", degreesOfFreedom + 1, expectedProbabilities.count] code:0 userInfo:nil]);
     }
     double chiSquare = [self chiSquare:counts probaby:expectedProbabilities];
     double upperLimitOfChiSquareValue = [self q_chi2:degreesOfFreedom chi2:chiSquare];

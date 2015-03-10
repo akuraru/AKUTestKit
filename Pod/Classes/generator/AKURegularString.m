@@ -123,7 +123,7 @@
     }
 }
 - (void)spliteOr {
-    for (int i = 0, _len = str.count;i < _len; i ++) {
+    for (NSInteger i = 0, _len = str.count;i < _len; i ++) {
         RegularBase *r = str[i];
         if ([r isKindOfClass:RegularOR.class]) {
             [strings addObject:[str subarrayWithRange:(NSRange){0, i}]];
@@ -176,7 +176,7 @@
 
 - (NSString *)string {
     NSMutableString *string = [NSMutableString string];
-    for (RegularBase *rb in strings[arc4random_uniform(strings.count)]) {
+    for (RegularBase *rb in strings[arc4random_uniform((u_int32_t)strings.count)]) {
         [string appendString:[rb string]];
     }
     return string;
@@ -235,7 +235,7 @@
 }
 - (NSString *)string {
     NSMutableString *string = [NSMutableString string];
-    NSInteger _len = arc4random_uniform(length - location) + location;
+    NSInteger _len = arc4random_uniform((u_int32_t)(length - location)) + location;
     for (NSInteger i = 0; i < _len; i++) {
         [string appendString:[r string]];
     }
